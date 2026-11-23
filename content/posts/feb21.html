@@ -1,0 +1,291 @@
+---
+title: February 2021 - Rise of the Data Cloud by Frank Slootman and Steve Hamm
+date: '2021-02-28'
+slug: feb21
+tags:
+- Snowflake
+- Data Warehouse
+- Oracle
+- Vertica
+- Netezza
+- IBM
+- Databricks
+- Apache Spark
+- Open Source
+- Fivetran
+- Matillion
+- dbt
+- Data Lake
+- Sequoia
+- ServiceNow
+- Crowdstrike
+- Cloudera
+- Hortonworks
+- MapR
+- BigQuery
+- Frank Slootman
+- Teradata
+- Xerox
+- Informix
+- NCR
+- AT&T
+- Benoit Dageville
+- Mike Speiser
+- Sutter Hill Ventures
+- Redshift
+- Amazon
+- ETL
+- Hadoop
+- SQL
+categories:
+- Non-Fiction
+cover: /assets/1613406339812-Q79P0JCQLESOX9ODF9Z0_51F8f5pUwgL._SY344_BO1%2C204%2C203%2C200_.jpg
+---
+<div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1613405748845" id="item-602a9cf1c1889644fc291a96"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text" id="block-f48672a080de5af18672"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <p class="" style="white-space:pre-wrap;">This month we read a new book by the CEO of Snowflake and author of our November 2020 book, Tape Sucks. The book covers Snowflake’s founding, products, strategy, industry specific solutions and partnerships. Although the content is somewhat interesting, it reads more like a marketing book than an actually useful guide to cloud data warehousing. Nonetheless, its a solid quick read on the state of the data infrastructure ecosystem.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text" id="block-0c2ae8fa6c852d091bc2"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Tech Themes</strong></span></h3><ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>The Data Warehouse.  </strong>A data warehouse is a type of database that is optimized for analytics. These optimizations mainly revolve around complex query performance, the ability to handle multiple data types, the ability to integrate data from different applications, and the ability to run fast queries across large data sets. In contrast to a normal database (like Postgres), a data warehouse is purpose-built for efficient retrieval of large data sets and not high performance read/write transactions like a typical relational database. The industry began in the late 1970s and early 80’s, driven by work done by the “Father of Data Warehousing” Bill Inmon and early competitor Ralph Kimball, who was a former Xerox PARC designer. In 1986, Kimball launched Redbrick Systems and <a href="https://www.dataversity.net/a-short-history-of-data-warehousing/">Inmon launched Prism Solutions in 1991, with its leading product the Prism Warehouse Manager</a>. Prism went public in 1995 and was acquired by <a href="https://www.kmworld.com/Articles/News/News/Ardent-Software-acquires-Prism-Solutions-11904.aspx#:~:text=In%20a%20move%20to%20achieve,valued%20at%20approximately%20%2442%20million.">Ardent Software in 1998 for $42M</a> while Red Brick was acquired by <a href="https://esj.com/articles/1998/11/18/informix-buys-red-brick-in-warehousing-consolidation.aspx?m=1">Informix for ~$35M in 1998</a>. In the background, a company called Teradata, which was formed in the late <a href="https://www.teradata.com/About-Us/Our-History">1970s by researchers at Cal and employees from Citibank</a>, was going through their own journey to the data warehouse. Teradata would IPO in 1987, get acquired by NCR in 1991; NCR itself would get acquired by AT&amp;T in 1991; NCR would then spin out of AT&amp;T in 1997,  and Teradata would spin out of NCR through IPO in 2007. What a whirlwind of corporate acquisitions! Around that time, other new data warehouses were popping up on the scene including <a href="https://en.wikipedia.org/wiki/Netezza">Netezza (launched in 1999)</a> and <a href="https://en.wikipedia.org/wiki/Vertica">Vertica (2005)</a>. Netezza, Vertica, and Teradata were great solutions but they were physical hardware that ran a highly efficient data warehouse on-premise. The issue was, as data began to grow on the hardware, it became really difficult to add more hardware boxes and to know how to manage queries optimally across the disparate hardware. Snowflake wanted to leverage the unlimited storage and computing power of the cloud to allow for infinitely scalable data warehouses. This was an absolute game-changer as early customer Accordant Media described, “In the first five minutes, I was sold. Cloud-based. Storage separate from compute. Virtual warehouses that can go up and down. I said, ‘That’s what we want!’”</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Storage + Compute. </strong>Snowflake was launched in 2012 by Benoit Dageville (Oracle), Thierry Cruanes (Oracle) and Marcin Żukowski (Vectorwise). Mike Speiser and Sutter Hill Ventures provided the initial capital to fund the formation of the company. After numerous whiteboarding sessions, the technical founders decided to try something crazy, separating data storage from compute (processing power). This allowed Snowflake’s product to scale the storage (i.e. add more boxes) and put tons of computing power behind very complex queries. What may have been limited by Vertica hardware, was now possible with Snowflake. At this point, the cloud had only been around for about 5 years and unlike today, there were only a few services offered by the main providers. The team took a huge risk to 1) bet on the long-term success of the public cloud providers and 2) try something that had never successfully been accomplished before. When they got it to work, it felt like magic. “One of the early customers was using a $20 million system to do behavioral analysis of online advertising results. Typically, one big analytics job would take about thirty days to complete. When they tried the same job on an early version of Snowflake;’s data warehouse, it took just six minutes. After Mike learned about this, he said to himself: ‘Holy shit, we need to hire a lot of sales people. This product will sell itself.’” This idea was so crazy that not even Amazon (where Snowflake runs) thought of unbundling storage and compute when they built their cloud-native <a href="https://en.wikipedia.org/wiki/Amazon_Redshift#:~:text=Amazon%20Redshift%20is%20based%20on,available%20on%20February%2015%2C%202013.">data warehouse, Redshift, in 2013</a>. Funny enough, Amazon also sought to attract people away from Oracle, hence the name Red-Shift. It would take Amazon almost seven years to re-design their data warehouse to separate storage and compute in <a href="https://aws.amazon.com/about-aws/whats-new/2020/04/amazon-redshift-launches-nodes-managed-storage/">Redshift RA3 which launched in 2019</a>. On top of these functional benefits, there is a massive gap in the cost of storage and the cost of compute and separating the two made Snowflake a significantly more cost-competitive solution than traditional hardware systems.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>The Battle for Data Pipelines. </strong>A<strong> </strong>typical data pipeline (shown below) consists of pulling data from many sources, perform ETL/ELT (extract, load, transform and vice versa), centralizing it in a data warehouse or data lake, and connecting that data to visualization tools like Tableau or Looker. All parts of this data stack are facing intense competition. On the ETL/ELT side, you have companies like <a href="https://fivetran.com/blog/warehouse-benchmark">Fivetran</a> and <a href="https://www.matillion.com/">Matillion</a> and on the data warehouse/data lake side you have <a href="https://www.snowflake.com/">Snowflake</a> and <a href="https://databricks.com/product/delta-lake-on-databricks">Databricks</a>. Fivetran focuses on the extract and load portion of ETL, providing a data integration tool that allows you to connect to all of your operational systems (salesforce, zendesk, workday, etc.) and pull them all together in Snowflake for comprehensive analysis. Matillion is similar, except it connects to your systems and imports raw data into Snowflake, and then transforms it (checking for NULL’s, ensuring matching records, removing blanks) in your Snowflake data warehouse. Matillion thus focuses on the load and transform steps in ETL while <a href="https://fivetran.com/docs/transformations/dbt">Fivetran focuses on the extract and load portions and leverages dbt</a> (data build tool) to do transformations. The data warehouse vs. data lake debate is a complex and highly technical discussion but it mainly comes down to Databricks vs. Snowflake. Databricks is primarily a Machine Learning platform that allows you to run Apache Spark (an open-source ML framework) at scale. Databricks’s main product, Delta Lake allows you to store all data types - structured and unstructured for real-time and complex analytical processes. As Datagrom points out here, the platforms come down to three differences: <a href="https://www.datagrom.com/data-science-machine-learning-ai-blog/snowflake-vs-databricks">data structure, data ownership, and use case versatility</a>. Snowflake requires structured or semi-structured data prior to running a query while Databricks does not. Similarly, while Snowflake decouples data storage from compute, it does not decouple data ownership meaning Snowflake maintains all of your data, whereas you can run Databricks on top of any data source you have whether it be on-premise or in the cloud. Lastly, Databricks acts more as a processing layer (able to function in code like python as well as SQL) while Snowflake acts as a query and storage layer (mainly driven by SQL). Snowflake performs best with business intelligence querying while Databricks performs best with data science and machine learning. Both platforms can be used by the same organizations and I expect both to be massive companies (<a href="https://databricks.com/company/newsroom/press-releases/databricks-raises-1-billion-series-g-investment-at-28-billion-valuation">Databricks recently raised at a $28B valuation</a>!). All of these tools are blending together and competing against each other - Databricks just launched a new <a href="http://cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf">LakeHouse (Data lake + data warehouse - I know the name is hilarious)</a> and Snowflake is leaning heavily into its <a href="https://www.snowflake.com/workloads/data-lake/">data lake</a>. We will see who wins!</p></li></ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div><div class="sqs-block website-component-block sqs-block-website-component sqs-block-code code-block sqs-col-6 span-6 float float-right" data-block-css="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.code/f246b631-6711-4c77-87b6-0240c8ed5d9a_1120/website.components.code.styles.css&quot;]" data-block-scripts="[&quot;https://definitions.sqspcdn.com/website-component-definition/static-assets/website.components.code/f246b631-6711-4c77-87b6-0240c8ed5d9a_1120/website.components.code.visitor.js&quot;]" data-block-type="1337" data-definition-name="website.components.code" data-sqsp-block="code" data-website-component-id="18a5b71be3393f2d219d" id="block-18a5b71be3393f2d219d"><div class="sqs-block-content"><div
+  class="sqs-code-container"
+  
+  
+    data-localized="{&quot;enableSafeModeButton&quot;:&quot;Preview in safe mode&quot;,&quot;enableSafeModeText&quot;:&quot;This block contains embedded scripts. Embedded scripts are disabled while you're logged in and editing your site.&quot;,&quot;enableSafeModeTitle&quot;:&quot;Embedded Scripts&quot;,&quot;exitSafeModeButton&quot;:&quot;Exit safe preview&quot;,&quot;exitSafeModeText&quot;:&quot;Please view the page after logging out for accurate rendering.&quot;,&quot;exitSafeModeTitle&quot;:&quot;Safe Preview&quot;,&quot;globalSafeMode&quot;:&quot;Embedded Code: This block contains embedded code that has been disabled.&quot;,&quot;scriptDisabled&quot;:&quot;Script Disabled&quot;}"
+  
+  
+  
+  
+>
+  
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">An interesting data platform battle is brewing that will play out over the next 5-10 years: The Data Warehouse vs the Data Lakehouse, and the race to create the data cloud<br><br>Who&#39;s the biggest threat to <a href="https://twitter.com/snowflake?ref_src=twsrc%5Etfw">@snowflake</a>? I think it&#39;s <a href="https://twitter.com/databricks?ref_src=twsrc%5Etfw">@databricks</a>, not AWS Redshift<a href="https://t.co/R2b77XPXB7">https://t.co/R2b77XPXB7</a></p>&mdash; Jamin Ball (@jaminball) <a href="https://twitter.com/jaminball/status/1354075473081298944?ref_src=twsrc%5Etfw">January 26, 2021</a></blockquote> 
+  
+  
+
+
+
+</div>
+
+<style class="transform-overrides-vars">
+  
+</style>
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text" id="block-c00be87bcddc00882610"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Business Themes</strong></span></h3>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div><div class="sqs-block gallery-block sqs-block-gallery sqs-col-6 span-6 float float-right" data-block-json="&#123;&quot;existingGallery&quot;:null,&quot;hSize&quot;:6,&quot;newWindow&quot;:false,&quot;floatDir&quot;:&quot;right&quot;,&quot;methodOption&quot;:&quot;transient&quot;,&quot;aspectRatio&quot;:null,&quot;auto-crop&quot;:true,&quot;autoplay&quot;:false,&quot;blockAnimation&quot;:&quot;none&quot;,&quot;collectionId&quot;:&quot;602a9cf1c1889644fc291a88&quot;,&quot;controls&quot;:true,&quot;design&quot;:&quot;slideshow&quot;,&quot;meta-position&quot;:&quot;bottom&quot;,&quot;show-meta&quot;:true,&quot;show-meta-basic&quot;:true,&quot;show-meta-only-title&quot;:false,&quot;show-meta-only-description&quot;:false,&quot;show-meta-on-hover&quot;:true,&quot;square-thumbs&quot;:true,&quot;thumbnails&quot;:false,&quot;vSize&quot;:null,&quot;transientGalleryId&quot;:&quot;602a9cf1c1889644fc291a88&quot;&#125;" data-block-type="8" data-sqsp-block="gallery" id="block-9eba30b662aced1e9802"><div class="sqs-block-content">
+
+
+  
+
+  
+
+
+<div class="
+  sqs-gallery-container
+  sqs-gallery-block-slideshow
+  
+  
+  sqs-gallery-has-controls
+  
+
+  
+    sqs-gallery-block-show-meta sqs-gallery-block-meta-position-bottom
+    sqs-gallery-block-meta-hover
+  
+  sqs-gallery-block-show-meta
+  
+  
+
+  
+  
+
+  
+  block-animation-none
+  clear"
+  
+  
+>
+  <div class="sqs-gallery">
+    
+      
+
+        
+          
+            <div class="slide content-fill" data-type="image" data-click-through-url="">
+              
+                <noscript><img src="/assets/1614475306862-K4BCWNP47FUY11MNQ2YD_Lakehouse_v1.png" alt="Lakehouse_v1.png" /></noscript><img class="thumb-image" elementtiming="system-gallery-block-slideshow" data-src="/assets/1614475306862-K4BCWNP47FUY11MNQ2YD_Lakehouse_v1.png" data-image="/assets/1614475306862-K4BCWNP47FUY11MNQ2YD_Lakehouse_v1.png" data-image-dimensions="983x458" data-image-focal-point="0.5,0.5" alt="Lakehouse_v1.png" data-load="false" data-image-id="603af0278186fa554e452ed9" data-type="image" />
+              
+
+              
+                
+              
+              <div class="color-overlay"></div>
+            </div>
+          
+          
+        
+
+        
+
+        
+
+      
+
+        
+          
+            <div class="slide content-fill" data-type="image" data-click-through-url="">
+              
+                <noscript><img src="/assets/1614475284169-FCH9J0OKG4BFPS38IYD2_architecture-overview.png" alt="architecture-overview.png" /></noscript><img class="thumb-image" elementtiming="system-gallery-block-slideshow" data-src="/assets/1614475284169-FCH9J0OKG4BFPS38IYD2_architecture-overview.png" data-image="/assets/1614475284169-FCH9J0OKG4BFPS38IYD2_architecture-overview.png" data-image-dimensions="858x485" data-image-focal-point="0.5,0.5" alt="architecture-overview.png" data-load="false" data-image-id="603af0130d643915745bd70a" data-type="image" />
+              
+
+              
+                
+              
+              <div class="color-overlay"></div>
+            </div>
+          
+          
+        
+
+        
+
+        
+
+      
+    
+  </div>
+
+  
+    <div class="sqs-gallery-meta-container">
+    
+    
+      
+      
+        <div class="sqs-gallery-controls">
+          <a
+            tabindex="0"
+            role="button"
+            class="previous"
+            aria-label="Previous Slide"
+          ></a>
+          <a
+            tabindex="0"
+            role="button"
+            class="next"
+            aria-label="Next Slide"
+          ></a>
+        </div>
+      
+    
+    
+    </div> <!-- END .sqs-gallery-meta-container -->
+  
+
+</div>
+
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text" id="block-3e200261b2e52fb374c8"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Marketing Customers.</strong> This book at its core, is a marketing document. Sure, it gives a nice story of how the company was built, the insights of its founding team, and some obstacles they overcame. But the majority of the book is just a “Imagine what you could do with data” exploration across a variety of industries and use cases. Its not good or bad, but its an interesting way of marketing - that’s for sure. Its annoying they spent so little on the technology and actual company building. Our <a href="/books/may2019">May 2019 book, <em>The Everything Store</em></a><em>, </em>about Jeff Bezos and Amazon was perfect because it covered all of the decision making and challenging moments to build a long-term company. This book just talks about customer and partner use cases over and over. Slootman’s section is only about 20 pages and five of them cover case studies from Square, Walmart, Capital One, Fair, and Blackboard. I suspect it may be due to the controversial ousting of their long-time CEO Bob Muglia for Frank Slootman, co-author of this book. As this Forbes article noted: <a href="https://www.forbes.com/sites/alexkonrad/2021/02/01/the-outsider/?sh=1ae1a3a702db">“Just one problem: No one told Muglia until the day the company announced the coup. Speaking publicly about his departure for the first time, Muglia tells <em>Forbes</em> that it took him months to get over the shock.”</a> One day we will hear the actual unfiltered story of Snowflake and it will make for an interesting comparison to this book.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Timing &amp; Building. </strong>We often forget how important timing is in startups. Being the right investor or company at the right time can do a lot to drive unbelievable returns. Consider Don Valentine at Sequoia in the early 1970’s. We know that <a href="https://www.evidenceinvestor.com/how-persistent-is-outperformance-in-venture-capital/">venture capital fund performance persists</a>, in part due to incredible branding at firms like Sequoia that has built up over years and years (obviously reinforced by top-notch talents like Mike Moritz and Doug Leone). Don is a great investor and took significant risks on unproven individuals like Steve Jobs (Apple), Nolan Bushnell (Atari), and Trip Hawkins (EA). But he also had unfettered access to the birth of an entirely new ecosystem and knowledge of how that ecosystem would change business, built up from his years at Fairchild Semiconductor. Don is a unique person and capitalized on that incredible knowledgebase, veritably creating the VC industry. Sequoia is a top firm because he was in the right place at the right time with the right knowledge. Now let’s cover some companies that weren’t: Cloudera, Hortonworks, and MapR. In 2005, Yahoo engineers Doug Cutting and Mike Cafarella, inspired by the <a href="https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf">Google File System paper</a>, created <a href="https://en.wikipedia.org/wiki/Apache_Hadoop">Hadoop</a>, a distributed file system for storing and accessing data like never before. Hadoop spawned many companies like Cloudera, Hortonworks, and MapR that were built to commercialize the open-source Hadoop project. All of the companies came out of the gate fast with big funding - Cloudera raised $1B at a $4B valuation prior to its 2017 IPO, Hortonworks raised $260M at a $1B valuation prior to its 2014 IPO, and MapR $300M before it was acquired by HPE in 2019. The companies all had one thing in problem however, they were on-premise and built prior to the cloud gaining traction. That meant it required significant internal expertise and resources to run Cloudera, Hortonworks, and MapR software. In 2018, <a href="https://techcrunch.com/2018/10/03/cloudera-and-hortonworks-announce-5-2-billion-merger/">Cloudera and Hortonworks merged</a> (at a $5B valuation) because the competitive pressure from the cloud was eroding both of their businesses. MapR was quietly <a href="https://www.datanami.com/2019/08/05/hpe-acquires-mapr/">acquired for less than it raised</a>. Today Cloudera trades at a $5B valuation meaning no shareholder return since the merger and the business is only recently slightly profitable at its current low growth rate. This cautionary case study shows how important timing is and how difficult it is to build a lasting company in the data infrastructure world. As the new analytics stack is built with Fivetran, Matillion, dbt, Snowflake, and Databricks, it will be interesting to see which companies exist 10 years from now. Its probable that some new technology will come along and hurt every company in the stack, but for now the coast is clear - the scariest time for any of these companies.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Burn Baby Burn. </strong>Snowflake burns A LOT of money. In the Nine months ended October 31, 2020, Snowflake burned $343M, including $169M in their third quarter alone. Why would Snowflake burn so much money? Because they are growing efficiently! What does efficient growth mean? As we discussed in the<a href="/books/nov20"> last Frank Slootman book</a> - sales and marketing efficiency is a key hallmark to understand the quality of growth a company is experiencing. According to their filings, Snowflake added ~$230M of revenue and spent $325M in sales and marketing. This is actually not terribly efficient - it supposes a dollar invested in sales and marketing yielded $0.70 of incremental revenue. While you would like this number to be closer to 1x (i.e. $1 in S&amp;M yield $1 in revenue - hence a repeatable go-to-market motion), it is not terrible. ServiceNow (Slootman’s old company), actually operates less efficiently - for every dollar it invests in sales and marketing, it generates only $0.55 of subscription revenue. Crowdstrike, on the other hand, operates a partner-driven go-to-market, which enables it to generate more while spending less - created $0.90 for every dollar invested in sales and marketing over the last nine months. However, there is a key thing that distinguishes the data warehouse compared to these other companies and Ben Thompson at Stratechery nails it here: <a href="https://stratechery.com/2020/snowflakes-s-1-snowflake-vs-the-public-cloud-snowflakes-sales-marketing/#memberful_overlay">“Think about this in the context of Snowflake’s business: the entire concept of a data warehouse is that it contains nearly all of a company’s data, which (1) it has to be sold to the highest levels of the company, because you will only get the full benefit if everyone in the company is contributing their data and (2) once the data is in the data warehouse it will be exceptionally difficult and expensive to move it somewhere else. Both of these suggest that Snowflake should spend more on sales and marketing, not less. Selling to the executive suite is inherently more expensive than a bottoms-up approach. Data warehouses have inherently large lifetime values given the fact that the data, once imported, isn’t going anywhere.”</a> I hope Snowflake burns more money in the future, and builds a sustainable long-term business.</p></li></ol><h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Dig Deeper</strong></span></h3><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;">Early Youtube Videos Describing <a href="https://www.youtube.com/watch?ab_channel=SnowflakeInc.&amp;v=QTEprlUFWNY">Snowflake’s Architecture</a> and <a href="https://www.youtube.com/watch?ab_channel=SnowflakeInc.&amp;v=QspIeh-Gyko">Re-inventing the Data Warehouse</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.networkworld.com/article/2302657/update--ncr-to-spin-off-teradata.html">NCR’s spinoff of Teradata in 2007</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?ab_channel=Fivetran&amp;v=A0hYQQ7fUuk">Fraser Harris of Fivetran and Tristan Handy of dbt speak at the Modern Data Stack Conference</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?ab_channel=StanfordGraduateSchoolofBusiness&amp;v=nKN-abRJMEw">Don Valentine, Sequoia Capital: "Target Big Markets" - A discussion at Stanford</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://kwokchain.com/2020/09/22/the-mike-speiser-incubation-playbook/">The Mike Speiser Incubation Playbook (an essay by Kevin Kwok)</a></p></li></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div>
