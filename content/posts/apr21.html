@@ -1,0 +1,215 @@
+---
+title: April 2021 - Innovator's Solution by Clayton Christensen and Michael Raynor
+date: '2021-04-30'
+slug: apr21
+tags:
+- Clayton Christensen
+- AWS
+- Nike
+- Amazon
+- Marriott
+- Warren Buffett
+- Terry Smith
+- Blackberry
+- RIM
+- Microsoft
+- Motorola
+- iPhone
+- Facebook
+- Google
+- Robinhood
+- Citadel
+- Schwab
+- Fidelity
+- Morgan Stanley
+- Oracle
+- Salesforce
+- Walmart
+- Macy's
+- Kmart
+- Confluent
+- Kafka
+- Citigroup
+- Intel
+- Gitlab
+- Redis
+categories:
+- Non-Fiction
+cover: /assets/1619878197146-NSTWR3YDVEJ0D8D74KLV_71PoYga%2BqwL.jpg
+---
+<div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1619878150100" id="item-608d5ed02c280c5e2fc9143d"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text" id="block-55e1738ad2bf7540b7ab"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <p class="" style="white-space:pre-wrap;">This month we take another look at disruptive innovation in the counter piece to Clayton Christensen’s Innovator’s Dilemma, our <a href="/books/july20">July 2020 book</a>. The book crystallizes the types of disruptive innovation and provides frameworks for how incumbents can introduce or combat these innovations. The book was a pleasure to read and will serve as a great reference for the future.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text" id="block-f84c43f431e212eee516"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Tech Themes</strong></span></h3><ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Integration and Outsourcing. </strong>Today, technology companies rely on a variety of software tools and open source components to build their products. When you stitch all of these components together, you get the full product architecture. A great example <a href="https://docs.gitlab.com/ee/development/architecture.html">is seen here with Gitlab</a>, an SMB DevOps provider. They have Postgres for a relational database, Redis for caching, NGINX for request routing, Sentry for monitoring and error tracking and so on. Each of these subsystems interacts with each other to form the powerful Gitlab project. These interaction points are called interfaces. The key product development question for companies is: “Which things do I build internally and which do I outsource?” A simple answer offered by many MBA students is “Outsource everything that is not part of your core competence.” As Clayton Christensen points out, “The problem with core-competence/not-your-core-competence categorization is that what might seem to be a non-core activity today might become an absolutely critical competence to have mastered in a proprietary way in the future, and vice versa.” A great example that we’ve discussed before is IBM’s decision to go with <a href="https://www.ozy.com/true-and-stories/the-agreement-that-catapulted-microsoft-over-ibm/94437/">Microsoft DOS for its Operating System</a> and <a href="https://uk.pcmag.com/opinion/111756/why-the-ibm-pc-used-an-intel-8088#:~:text=By%20Michael%20Miller%2011%20Aug%202011%2C%208%3A44%20p.m.&amp;text=One%20of%20the%20big%20decisions,central%20processing%20unit%20(CPU).&amp;text=Both%20Gates%20and%20Allen%20say,to%20the%2016%2Dbit%208088.">Intel for its Microprocessor</a>. At the time, IBM thought it was making a strategic decision to outsource things that were not within its core competence but they inadvertently gave almost all of the industry profits from personal computing to Intel and Microsoft. Other competitors copied their modular approach and the whole industry slugged it out on price. The question of whether to outsource really depends on what might be important in the future. But that is difficult to predict, so the question of integration vs. outsourcing really comes down to the state of the product and market itself: is this product “not good enough” yet? If the answer is yes, then a proprietary, integrated architecture is likely needed just to make the actual product work for customers. Over time, as competitors enter the market and the fully integrated platform becomes more commoditized, the individual subsystems become increasingly important competitive drivers. So the decision to outsource or build internally must be made on the status of product and the market its attacking. </p></li><li><p class="" style="white-space:pre-wrap;"><strong>Commoditization within Stacks. </strong>The above point leads to the unbelievable idea of how companies fall into the commoditization trap. This happens from overshooting, where companies create products that are too good (which I find counter-intuitive, who thought that doing your job really well would cause customers to leave!). Christensen describes this through the lens of a salesperson “‘Why can’t they see that our product is better than the competition? They’re treating it like a commodity!’ This is evidence of overshooting…there is a performance surplus. Customers are happy to<em> accept</em> improved products, but unwilling to pay a premium price to get them.” At this time, the things demanded by customers flip - they are willing to pay premium prices for innovations along a new trajectory of performance, most likely speed, convenience, and customization. “The pressure of competing along this new trajectory of improvement forces a gradual evolution in product architectures, away from the interdependent, proprietary architectures that had the advantage in the not-good-enough era toward <em>modular</em> designs in the era of performance surplus. In a modular world, you can prosper by outsourcing or by supplying just one element.” This process of integration, to modularization and back, is super fascinating. As an example of modularization, let’s take the streaming company <a href="https://www.confluent.io/">Confluent, the makers of the open-source software project Apache Kafka</a>. Confluent offers a real-time communications service that allows companies to stream data (as events) rather than batching large data transfers. Their product is often a sub-system underpinning real-time applications, like <a href="https://www.confluent.io/resources/kafka-summit-2020/leon-stiel-citigroup-jun-rao-confluent-keynote-qa/">providing data to traders at Citigroup</a>. Clearly, the basis of competition in trading has pivoted over the years as more and more banking companies offer the service. Companies are prioritizing a new axis, speed, to differentiate amongst competing services, and when speed is the basis of competition, you use Confluent and Kafka to beat out the competition. Now let’s fast forward five years and assume all banks use Kafka and Confluent for their traders, the modular sub-system is thus commoditized. What happens? I’d posit that the axis would shift again, maybe towards convenience, or customization where traders want specific info displayed maybe on a mobile phone or tablet. The fundamental idea is that “Disruption and commoditization can be seen as two sides of the same coin. That’s because the process of commoditization initiates a reciprocal process of de-commoditization [somewhere else in the stack].”</p></li><li><p class="" style="white-space:pre-wrap;"><strong>The Disruptive Becomes the Disruptor. </strong>Disruption is a relative term. <a href="/books/july20">As we’ve discussed previously</a>, disruption is often mischaracterized as startups enter markets and challenge incumbents. Disruption is really a focused and contextual concept whereby products that are “not good enough” by market standards enter a market with a simpler, more convenient, or less expensive product. These products and markets are often dismissed by incumbents or even ceded by market leaders as those leaders continue to move up-market to chase even bigger customers. Its fascinating to watch the disruptive become the disrupted. A great example would be department stores - initially, <a href="https://en.wikipedia.org/wiki/Macy's">Macy’s offered a massive selection that couldn’t be found in any single store</a> and customers loved it. They did this by turning inventory three times per year with 40% gross margins for a 120% return on capital invested in inventory. In the 1960s, Walmart and Kmart attacked the full-service department stores by offering a similar selection at much cheaper prices. They did this by setting up a value system whereby they could make 23% gross margins but turn inventories 5 times per year, enabling them to earn the industry golden 120% return on capital invested in inventory. Full-service department stores decided not to compete against these lower gross margin products and shifted more space to beauty and cosmetics that offered even higher gross margins (55%) than the 40% they were used to. This meant they could increase their return on capital invested in inventory and their profits while avoiding a competitive threat. This process continued with discount stores eventually pushing Macy’s out of most categories until Macy’s had nowhere to go. All of a sudden the initially disruptive department stores had become disrupted. We see this in technology markets as well. I’m not 100% this qualifies but think about Salesforce and Oracle. Marc Benioff had spent a number of years at Oracle and left to start Salesforce, which pioneered selling subscription, cloud software, on a per-seat revenue model. This meant a much cheaper option compared to traditional Oracle/Siebel CRM software. Salesforce was initially adopted by smaller customers that didn’t need the feature-rich platform offered by Oracle. Oracle dismissed Salesforce as competition e<a href="https://money.cnn.com/magazines/fsb/fsb_archive/2003/03/01/338759/index.htm">ven as Oracle CEO Larry Ellison seeded Salesforce and sat on Salesforce’s board</a>. Today, Salesforce is a $200B company and briefly passed Oracle in market cap a few months ago. But now, Salesforce has raised its prices and mostly targets large enterprise buyers to hit its ambitious growth initiatives. Down-<a href="https://www.hubledigital.com/blog/moving-from-salesforce-to-hubspot-crm">market competitors like Hubspot</a> have come into the market with cheaper solutions and more fully integrated marketing tools to help smaller businesses that aren’t ready for a fully-featured Salesforce platform. Disruption is always contextual and it never stops.</p></li></ol><h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Business Themes</strong></span></h3>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div><div class="sqs-block gallery-block sqs-block-gallery sqs-col-6 span-6 float float-right" data-block-json="&#123;&quot;hSize&quot;:6,&quot;floatDir&quot;:&quot;right&quot;,&quot;methodOption&quot;:&quot;transient&quot;,&quot;aspectRatio&quot;:null,&quot;auto-crop&quot;:true,&quot;autoplay&quot;:false,&quot;blockAnimation&quot;:&quot;none&quot;,&quot;collectionId&quot;:&quot;608d5ed02c280c5e2fc91436&quot;,&quot;controls&quot;:true,&quot;design&quot;:&quot;slideshow&quot;,&quot;meta-position&quot;:&quot;bottom&quot;,&quot;show-meta&quot;:true,&quot;show-meta-basic&quot;:true,&quot;show-meta-only-title&quot;:false,&quot;show-meta-only-description&quot;:false,&quot;show-meta-on-hover&quot;:true,&quot;square-thumbs&quot;:true,&quot;thumbnails&quot;:false,&quot;vSize&quot;:null,&quot;transientGalleryId&quot;:&quot;608d5ed02c280c5e2fc91436&quot;,&quot;existingGallery&quot;:null,&quot;newWindow&quot;:false&#125;" data-block-type="8" data-sqsp-block="gallery" id="block-e687a24ce7f339253248"><div class="sqs-block-content">
+
+
+  
+
+  
+
+
+<div class="
+  sqs-gallery-container
+  sqs-gallery-block-slideshow
+  
+  
+  sqs-gallery-has-controls
+  
+
+  
+    sqs-gallery-block-show-meta sqs-gallery-block-meta-position-bottom
+    sqs-gallery-block-meta-hover
+  
+  sqs-gallery-block-show-meta
+  
+  
+
+  
+  
+
+  
+  block-animation-none
+  clear"
+  
+  
+>
+  <div class="sqs-gallery">
+    
+      
+
+        
+          
+            <div class="slide content-fill" data-type="image" data-click-through-url="">
+              
+                <noscript><img src="/assets/1630718935034-KAVJUTMWW0KDJNIBN6EW_1_fnX5OXzCcYOyPfRHA7o7ug.png" alt="1_fnX5OXzCcYOyPfRHA7o7ug.png" /></noscript><img class="thumb-image" elementtiming="system-gallery-block-slideshow" data-src="/assets/1630718935034-KAVJUTMWW0KDJNIBN6EW_1_fnX5OXzCcYOyPfRHA7o7ug.png" data-image="/assets/1630718935034-KAVJUTMWW0KDJNIBN6EW_1_fnX5OXzCcYOyPfRHA7o7ug.png" data-image-dimensions="1000x825" data-image-focal-point="0.5,0.5" alt="1_fnX5OXzCcYOyPfRHA7o7ug.png" data-load="false" data-image-id="6132cbd6138bef56b45dc241" data-type="image" />
+              
+
+              
+                
+              
+              <div class="color-overlay"></div>
+            </div>
+          
+          
+        
+
+        
+
+        
+
+      
+    
+  </div>
+
+  
+    <div class="sqs-gallery-meta-container">
+    
+    
+      
+      
+        <div class="sqs-gallery-controls">
+          <a
+            tabindex="0"
+            role="button"
+            class="previous"
+            aria-label="Previous Slide"
+          ></a>
+          <a
+            tabindex="0"
+            role="button"
+            class="next"
+            aria-label="Next Slide"
+          ></a>
+        </div>
+      
+    
+    
+    </div> <!-- END .sqs-gallery-meta-container -->
+  
+
+</div>
+
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text" id="block-b06971e4ab56d836ee40"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Low-end-Market vs. New-Market Disruption. </strong>There are two types of established methods for disruption: Low-end-market (Down-market) and New-market. Low-end-market disruption seeks to establish performance that is “not good enough” along traditional lines, and targets overserved customers in the low-end of the mainstream market. It typically utilizes a new operating or financial approach with structurally different margins than up-market competitors. Amazon.com is a quintessential low-end market disruptor compared to traditional bookstores, <a href="https://mashable.com/2014/07/30/amazon-has-killed-publishers-they-just-dont-know-it-yet/">offering prices so low they angered book publishers</a> while offering unmatched <a href="https://www.axios.com/barnes-and-noble-book-stores-sale-amazon-effect-4f2753d2-818c-49d1-878a-60f0c3a5b3f7.html">convenience to customers allowing them to purchase books online</a>. In contrast, Robinhood is a great example of a new-market disruption. Traditional discount brokerages like <a href="https://en.wikipedia.org/wiki/Charles_Schwab_Corporation">Charles Schwab</a> and Fidelity had been around for a while (themselves disruptors of full-service models like Morgan Stanley Wealth Management). But Robinhood targeted a group of people that weren’t consuming in the market, namely teens and millennials, and they did it in an easy-to-use app with a much better user interface compared to Schwab and Fidelity. Robinhood also pioneered new pricing with zero-fee trading and made revenue via a new financial approach, payment for order flow (PFOF). Robinhood makes money by being a data provider to market makers - basically, large hedge funds, like Citadel, <a href="https://www.cnbc.com/2020/08/13/how-robinhood-makes-money-on-customer-trades-despite-making-it-free.html">pay Robinhood for data on their transactions</a> to help optimize customers buying and selling prices. When approaching big markets its important to ask: Is this targeted at a non-consumer today or am I competing at a structurally lower margin with a new financial model and a “not quite good enough” product? This determines whether you are providing a low-end market disruption or a new-market disruption.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Jobs To Be Done. </strong>The jobs to be done framework was one of the most important frameworks that Clayton Christensen ever introduced. Marketers typically use advertising platforms like Facebook and Google to target specific demographics with their ads. These segments are narrowly defined: “Males over 55, living in New York City, with household income above $100,000.” The issue with this categorization method is that while these are attributes that may be correlated with a product purchase, customers do not look up exactly how marketers expect them to behave and purchase the products expected by their attributes. There may be a correlation but simply targeting certain demographics does not yield a great result. The marketers need to understand <em>why </em>the customer is adopting the product. <a href="https://www.youtube.com/watch?v=OzezRI9KNKY">This is where the Jobs to Be Done framework comes in</a>. As Christensen describes it, “Customers - people and companies - have ‘jobs’ that arise regularly and need to get done. When customers become aware of a job that they need to get done in their lives, they look around for a product or service that they can ‘hire’ to get the job done. Their thought processes originate with an awareness of needing to get something done, and then they set out to hire something or someone to do the job as effectively, conveniently, and inexpensively as possible.” Christensen zeroes in on the contextual adoption of products; it is the circumstance and not the demographics that matter most. Christensen describes ways for people to view competition and feature development through the Jobs to Be Done lens using Blackberry as an example (later disrupted by the iPhone). While the immature smartphone market was seeing feature competition from Microsoft, Motorola, and Nokia, Blackberry and its parent company RIM came out with a simple to use device that allowed for short productivity bursts when the time was available. This meant they leaned into features that competed not with other smartphone providers (like better cellular reception), but rather things that allowed for these easy “productive” sessions like email, wall street journal updates, and simple games. <a href="https://www.theverge.com/2016/9/30/13119924/blackberry-failure-success">The Blackberry was later disrupted by the iPhone</a> which offered more interesting applications in an easier to use package. Interestingly, the first iPhone shipped without an app store (but as a proprietary, interdependent product) and was viewed as not good enough for work purposes, allowing the Blackberry to co-exist. Management even dismissed the iPhone as a competitor initially. It wasn’t long until the iPhone caught up and eventually surpassed the Blackberry as the world’s leading mobile phone. </p></li><li><p class="" style="white-space:pre-wrap;"><strong>Brand Strategies. </strong>Companies may choose to address customers in a number of different circumstances and address a number of Jobs to Be Done. It’s important that the Company establishes specific ways of communicating the circumstance to the customer. Branding is powerful, something that <a href="https://www.huffpost.com/entry/warren-buffett-and-the-power-of-brand-quality_b_592d7f66e4b0a7b7b469cd29">Warren Buffett</a>, <a href="https://www.ii.co.uk/analysis-commentary/terry-smith-warren-buffett-and-how-find-good-companies-ii515448">Terry Smith</a>, and Clayton Christensen have all recognized as durable growth providers. As Christensen puts it: “Brands are, at the beginning, hollow words into which marketers stuff meaning. if a brand’s meaning is positioned on a job to be done, then when the job arises in a customer’s life, he or she will remember the brand and hire the product. Customers pay significant premiums for brands that do a job well.” So what can a large corporate company do when faced with a disruptive challenger to its branding turf? It’s simple - add a word to their leading brand, targeted at the circumstance in which a customer might find themself. Think about Marriott, one of the leading hotel chains. <a href="https://www.marriott.com/marriott-brands.mi">They offer a number of hotel brands:</a> Courtyard by Marriott for business travel, Residence Inn by Marriott for a home away from home, the Ritz Carlton for high-end luxurious stays, Marriott Vacation Club for resort destination hotels. Each brand is targeted at a different Job to Be Done and customers intuitively understand what the brands stand for based on experience or advertising. A great technology example is Amazon Web Services (AWS), the cloud computing division of Amazon.com. Amazon invented the cloud, and rather than launch with the Amazon.com brand, which might have confused their normal e-commerce customers, they created a completely new brand targeted at a different set of buyers and problems, that maintained the quality and recognition that Amazon had become known for. Another great retail example is the <a href="https://www.nike.com/launch">SNKRs</a> app released by Nike. Nike understands that some customers are sneakerheads, and want to know the latest about all Nike shoe drops, so Nike created a distinct, branded app called SNKRS, that gives news and updates on the latest, trendiest sneakers. These buyers might not be interested in logging into the Nike app and may become angry after sifting through all of the different types of apparel offered by Nike, just to find new shoes. The SNKRS app offers a new set of consumers and an easy way to find what they are looking for (convenience), which benefits Nike’s core business. Branding is powerful, and understanding the Job to Be Done helps focus the right brand for the right job.</p></li></ol><h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Dig Deeper</strong></span></h3><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?ab_channel=Sa%C3%AFdBusinessSchool%2CUniversityofOxfordSa%C3%AFdBusinessSchool%2CUniversityofOxford&amp;v=rpkoCZ4vBSI">Clayton Christensen’s Overview on Disruptive Innovation</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://online.hbs.edu/blog/post/jobs-to-be-done-examples">Jobs to Be Done: 4 Real-World Examples</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.socialtables.com/blog/hotel-sales/marriotts-marketing/">A Peek Inside Marriott’s Marketing Strategy &amp; Why It Works So Well</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?v=wBwlpJSq75o">The Rise and Fall of Blackberry</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.investopedia.com/terms/p/paymentoforderflow.asp#:~:text=Payment%20for%20order%20flow%20(PFOF)%20is%20the%20compensation%20and%20benefit,to%20a%20particular%20market%20maker.">Payment for Order Flow Overview</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?v=3TI0rYnkulc">How Commoditization Happens</a></p></li></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div>
