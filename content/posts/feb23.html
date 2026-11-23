@@ -1,0 +1,271 @@
+---
+title: February 2023 - Anatomy of the Swipe by Ahmed Siddiqui
+date: '2023-02-28'
+slug: feb23
+tags:
+- Visa
+- Mastercard
+- Payments
+- Paypal
+- Square
+- EMV
+- Equifax
+- NatWest
+- American Express
+- Europay
+- Discover
+- China UnionPay
+- JCB
+- Zelle
+- Bank of America
+- JP Morgan Chase
+- Wells Fargo
+- Braintree
+- Cash App
+- Block
+- Early Warning Service
+- Divvy
+- Ramp
+- Bill.com
+- Marqeta
+- TSYS
+- Galileo
+- Global Payments
+- Fiserv
+- Fidelity National Information Services
+- WorldPay
+- Adyen
+- Pismo
+categories:
+- Non-Fiction
+cover: /assets/1688067741357-OPJO4D3KR70MREF94R2Y_Anatomy_of_The_Swipe.jpg
+---
+<div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1687900933099" id="item-649b51fdc076667b6d5792e8"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" data-sqsp-block="text" id="block-4d8cb42f39d1bcc6aac0"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <p class="" style="white-space:pre-wrap;">This month we dive back into the world of payments and take a refreshed look at how payments companies work. </p><h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Tech Themes</strong></span></h3>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" data-sqsp-block="text" id="block-57a01b486a7401ead833"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Authorization. </strong>How do credit card’s even work? What is on the magnetic stripe? It turns out that each stripe has an alternating set of tiny magnets on it that produce a magnetic field around the card. The card reader on a POS system is a solinoid; when the magnets swipe through the solinoid it creates a change in the magnetic field also known as magnetic flux. The POS processes the changes in current as its swiped through the Solinoid, and is able to understand the credit card via <a href="https://www.q-card.com/about-us/iso-magnetic-stripe-card-standards/page.aspx?id=1457">common card standards, created by ISO</a>. The challenge that existed with the internet, is how to ensure safe transactions when you are paying someone you clearly don’t know. The card companies created something called the card verification value (CVV), an extra number directly intended <a href="https://www.youtube.com/watch?ab_channel=MerchantAccounts.ca&amp;v=6cXgWhTc6us">NOT to be written anywhere except for the back of your credit card</a>. CVV codes were originally created by an <a href="https://en.wikipedia.org/wiki/Card_security_code">Equifax employee in the UK, and initially rolled out by NatWest bank, eventually expanding to Mastercard (1997), Amex (1999), and Visa (2001)</a>. However, the early internet still had a massive fraud problem, as <a href="https://tim.blog/2022/09/01/roelof-botha-transcript/">Roelof Botha discussed about Paypal</a> in his Tim Ferris podcast appearance. In addition, card authorization was still quite difficult in <a href="https://staxpayments.com/blog/emv-technology-impact-on-transactions/">Europe, where you would frequently have to call to provide authentication for cross-border purchases.</a> In 1993, <a href="https://en.wikipedia.org/wiki/EMV#EMV_chip_specification">Europay, Mastercard, and Visa formed EMVco</a>, to add additional fraud protection to cards. They were subsequently joined by other key members including American Express, Discover, JCB International, China UnionPay. <a href="https://www.banktech.com/payments/mastercard-and-europay-merge-to-form-a-global-payments-company/d/d-id/1288945.html">Europay eventually merged with Mastercard in 2002 prior to Mastercard’s IPO</a>. EMVco creates a standard for EMV chips, which embed small integrated circuits that produce <a href="https://www.youtube.com/watch?ab_channel=Techquickie&amp;v=hGyh9GPKok0">a single-use cryptographic key for a merchant to decrypt and authorize a transaction</a>. It is also incredibly difficult to clone a chip card, whereas magnetic stripes are fairly easy to copy. The increase in fraud protection was so great that it caused a liability shift, <a href="https://en.wikipedia.org/wiki/EMV">whereby the merchant (rather than the issuer) could become liable for fraud if a EMV chip card was not used</a>, and a swipe was used instead. The latest innovation in card security is 3D Secure 2, which <a href="allows businesses and their payment provider to send more data elements on each transaction to the cardholder’s bank. This includes payment-specific data like the shipping address, as well as contextual data, such as the customer’s device ID or previous transaction history.">“allows businesses and their payment provider to send more data elements on each transaction to the cardholder’s bank. This includes payment-specific data like the shipping address, as well as contextual data, such as the customer’s device ID or previous transaction history.”</a> The 3D Secure 2 also improves the UX of its “challenge flow,” which is an instance when a frictionless authentication wasn’t possible, for whatever reason. The challenge flow forces the user to authenticate the transaction through their banking application of choice, which is much more secure than just approving every transaction the network sees. Every day payments become more at risk and more secure!</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Zelle and banks Funded Payments.</strong> Similar to Visa and Mastercard, Zelle is a cash transfer system originally created by a consortium of banks. <a href="https://money.cnn.com/2011/05/25/news/companies/banks_paypal_clearxchange/index.htm">In 2011, Bank of America, JP Morgan, Wells Fargo, and several other banks built a Paypal competitor called clearXchange.</a> The new company would charge financial institutions to use the service, with most banks assuming the charges on behalf of their consumers. At the time, Venmo was beginning to take off with consumers utilizing its simple Peer-to-peer payments service. In 2012, Braintree acquired Venmo for just $26m. The low purchase price was the result of a lack of coherent business model, given Venmo’s founding by college roommates who were looking to send money easily. Later, in 2013, Braintree was acquired by Paypal for $800m. Braintree is an acquirer processor and introduced a business model to Venmo, namely investing the float of customer funds held in the Venmo ecosystem. In 2016, <a href="https://www.earlywarning.com/press-release/early-warning-completes-acquisition-clearxchange">clearXchange was acquired by another bank run service called Early Warning Service,</a> which provides risk management services to many financial institutions.<a href="https://golden.com/wiki/Early_Warning_Services-99D9BPV#:~:text=Early%20Warning%20Services%20is%20a,identity%20and%20fraud%20detection%20services.&amp;text=Early%20Warning%20Services%2C%20LLC%2C%20is,company%20owned%20by%20seven%20banks."> Early Warning was itself created in 1990 by Bank of America, BB&amp;T, Capital One, JP Morgan, and Wells Fargo</a>. Early Warning launched Zelle in 2017, utilizing clearXchange’s underlying technology. Zelle is now massive, <a href="https://www.forbes.com/sites/emilymason/2022/09/08/despite-a-late-start-bank-owned-zelle-moves-more-money-than-venmo-and-cash-app-combined/?sh=471ca7479d3f">processing over $1m in volume a minute</a>, which is more than competitors Venmo and Cash App. Zelle’s most recent stats are mind-blowing: <a href="https://www.zellepay.com/press-releases/financial-institutions-joining-zelle-networkr-increased-40-2022">2.3B payments with $629B in volume.</a>   Look at creation of zelle and other examples of banks creating new companies (like visa/mastercard)</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Money for Nothing, SaaS for Free. </strong>A new brand of payments companies are popping up that seek to turn a traditional SaaS model on its head. <a href="https://getdivvy.com">Divvy</a>, the spend management platform, gives its SaaS software away for free, instead monetizing just the payments processed through its product. Its quite wild to see a company build complex software just to give it away, right? This strategy has been copied many times over, as we talked about when discussing Netscape and Slack. Whether its open source or just free commercial software, the free-ness of it makes it attractive. However, if everyone is free, then you still have to compete on merit. <a href="https://support.ramp.com/hc/en-us/articles/360043056073-How-much-does-Ramp-cost-">Ramp</a>, a competitor to Divvy, <a href="https://techcrunch.com/2023/03/29/ramp-reports-4x-revenue-growth-says-it-still-has-vast-majority-of-equity-funding/">raised $750m at an $8.1B valuation in 2022</a>, and <a href="https://ramp.com/blog/ramp-march-2022-funding">processed over $5B in payment volume in 2021</a>. Divvy was acquired by Bill.com in 2021 for <a href="https://www.google.com/search?aqs=chrome.1.69i57j0i512j0i10i22i30j0i390i650.4946j0j7&amp;ie=UTF-8&amp;oq=divvy%20acquired&amp;q=divvy%20acquired%20by%20bill.com&amp;rlz=1C1VDKB_enUS965US967&amp;sourceid=chrome">$2.5B in a mix of cash and stock</a>. At the time of acquisition Divvy was doing just over <a href="https://s24.q4cdn.com/404137088/files/doc_financials/2021/q3/Bill.com-to-Acquire-Divvy-Presentation-Final.pdf">$100m of annualized revenue, and about $4B of TPV</a>, suggesting a take rate of ~2.5%. Ramp allegedly did about $100m in annualized revenue in 2022. While Divvy was able to find a successful exit through a willing buyer (a buyer who’s stock has declined 65% from all time highs), I’m not sure Ramp will find an easy buyer at $8.1B, but it may find the public markets if it can market itself as a cost-saving, AI, finance play. I’m just not sure that you can build a really big business by only processing payments and giving away complex software for free. We will see in time!</p></li></ol><h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Business Themes</strong></span></h3>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div><div class="sqs-block gallery-block sqs-block-gallery sqs-col-6 span-6 float float-right" data-block-json="&#123;&quot;existingGallery&quot;:null,&quot;hSize&quot;:6,&quot;newWindow&quot;:false,&quot;floatDir&quot;:&quot;right&quot;,&quot;methodOption&quot;:&quot;transient&quot;,&quot;aspectRatio&quot;:null,&quot;auto-crop&quot;:true,&quot;autoplay&quot;:false,&quot;blockAnimation&quot;:&quot;none&quot;,&quot;collectionId&quot;:&quot;649b51fdc076667b6d5792df&quot;,&quot;controls&quot;:true,&quot;design&quot;:&quot;slideshow&quot;,&quot;meta-position&quot;:&quot;bottom&quot;,&quot;show-meta&quot;:true,&quot;show-meta-basic&quot;:true,&quot;show-meta-only-title&quot;:false,&quot;show-meta-only-description&quot;:false,&quot;show-meta-on-hover&quot;:true,&quot;square-thumbs&quot;:true,&quot;thumbnails&quot;:false,&quot;vSize&quot;:null,&quot;transientGalleryId&quot;:&quot;649b51fdc076667b6d5792df&quot;&#125;" data-block-type="8" data-sqsp-block="gallery" id="block-0f3b080fe4fe432fb43e"><div class="sqs-block-content">
+
+
+  
+
+  
+
+
+<div class="
+  sqs-gallery-container
+  sqs-gallery-block-slideshow
+  
+  
+  sqs-gallery-has-controls
+  
+
+  
+    sqs-gallery-block-show-meta sqs-gallery-block-meta-position-bottom
+    sqs-gallery-block-meta-hover
+  
+  sqs-gallery-block-show-meta
+  
+  
+
+  
+  
+
+  
+  block-animation-none
+  clear"
+  
+  
+>
+  <div class="sqs-gallery">
+    
+      
+
+        
+          
+            <div class="slide content-fill" data-type="image" data-click-through-url="">
+              
+                <noscript><img src="/assets/1688065588361-NWZ4JV78WSDQMV1CPWXU_FIS_FISV_GPN_Returns.png" alt="FIS_FISV_GPN_Returns.png" /></noscript><img class="thumb-image" elementtiming="system-gallery-block-slideshow" data-src="/assets/1688065588361-NWZ4JV78WSDQMV1CPWXU_FIS_FISV_GPN_Returns.png" data-image="/assets/1688065588361-NWZ4JV78WSDQMV1CPWXU_FIS_FISV_GPN_Returns.png" data-image-dimensions="2400x1240" data-image-focal-point="0.5,0.5" alt="FIS_FISV_GPN_Returns.png" data-load="false" data-image-id="649dd63493eede6860e19948" data-type="image" />
+              
+
+              
+                
+              
+              <div class="color-overlay"></div>
+            </div>
+          
+          
+        
+
+        
+
+        
+
+      
+
+        
+          
+            <div class="slide content-fill" data-type="image" data-click-through-url="">
+              
+                <noscript><img src="/assets/1688065735001-AB76808GV3B52SZT73OS_Fintech_M%2BA.png" alt="Fintech_M+A.png" /></noscript><img class="thumb-image" elementtiming="system-gallery-block-slideshow" data-src="/assets/1688065735001-AB76808GV3B52SZT73OS_Fintech_M%2BA.png" data-image="/assets/1688065735001-AB76808GV3B52SZT73OS_Fintech_M%2BA.png" data-image-dimensions="660x744" data-image-focal-point="0.5,0.5" alt="Fintech_M+A.png" data-load="false" data-image-id="649dd6c687e44434182be1c3" data-type="image" />
+              
+
+              
+                
+              
+              <div class="color-overlay"></div>
+            </div>
+          
+          
+        
+
+        
+
+        
+
+      
+
+        
+          
+            <div class="slide content-fill" data-type="image" data-click-through-url="">
+              
+                <noscript><img src="/assets/1688067006659-A7UDGJC4OH6ASXTQGMIF_Anatomy_Swipe_With_Logos.jpg" alt="Anatomy_Swipe_With_Logos.jpg" /></noscript><img class="thumb-image" elementtiming="system-gallery-block-slideshow" data-src="/assets/1688067006659-A7UDGJC4OH6ASXTQGMIF_Anatomy_Swipe_With_Logos.jpg" data-image="/assets/1688067006659-A7UDGJC4OH6ASXTQGMIF_Anatomy_Swipe_With_Logos.jpg" data-image-dimensions="960x540" data-image-focal-point="0.5,0.5" alt="Anatomy_Swipe_With_Logos.jpg" data-load="false" data-image-id="649ddbbcc9a57f2d44c056e0" data-type="image" />
+              
+
+              
+                
+              
+              <div class="color-overlay"></div>
+            </div>
+          
+          
+        
+
+        
+
+        
+
+      
+    
+  </div>
+
+  
+    <div class="sqs-gallery-meta-container">
+    
+    
+      
+      
+        <div class="sqs-gallery-controls">
+          <a
+            tabindex="0"
+            role="button"
+            class="previous"
+            aria-label="Previous Slide"
+          ></a>
+          <a
+            tabindex="0"
+            role="button"
+            class="next"
+            aria-label="Next Slide"
+          ></a>
+        </div>
+      
+    
+    
+    </div> <!-- END .sqs-gallery-meta-container -->
+  
+
+</div>
+
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-border-radii="&#123;&quot;topLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;topRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomLeft&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;,&quot;bottomRight&quot;:&#123;&quot;unit&quot;:&quot;px&quot;,&quot;value&quot;:0.0&#125;&#125;" data-sqsp-block="text" id="block-2c11498f8a08395b453a"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Issuer, Issuer Processor, Acquirer, Acquirer Processor.</strong> The arc of an individual payment can be broken into its constituent parts. The Issuer is normally a bank that issues credit cards to its banking customers. A bank may use an issuer processor to manage a connection to the card networks (like Visa and Mastercard) and accept/decline transactions. Examples of issuer processors include Marqeta, TSYS, and Galileo. <a href="https://www.forbes.com/sites/donnafuscaldo/2019/05/28/global-payments-and-tsys-merge-in-21-5-billion-deal/?sh=2b6877583c3d">Global Payments and TSYS merged in 2019, in an absolutely massive $21.5B deal</a>, after <a href="https://newsroom.fiserv.com/news-releases/news-release-details/fiserv-combine-first-data-corporation-create-global-leader">Fiserv acquired FirstData for $22B</a> and <a href="https://www.reuters.com/article/us-worldpay-inc-m-a-fidelity-ntl-inf/u-s-firm-fis-buys-worldpay-for-35-billion-in-payments-deal-bonanza-idUSKCN1QZ0ML">Fidelity National Services acquired WorldPay for $34B</a>. 2019 was definitely a banner year for payments mergers, but signs of strain are already happening, <a href="https://www.paymentsdive.com/news/FIS-worldpay-spinoff-payments-debt-competition/650591/">with FIS announcing they’d be spinning out WorldPay in 2023</a>. Back to our transaction - the merchant will have a payment terminal of some sort, and will use an acquirer processor like Chase Paymentech, Tabapay, or Fiserv, that will also have a fast connection to the card networks to request approval for a transaction. Lastly, we have the acquiring bank, the merchant’s bank account. When we look back at these big deals, its clear that each player was trying to round out its processing capabilities - TSYS (issuer processor) with Global Payments (a merchant acquirer), Fiserv (merchant acquirer) with First Data (issuer processor), and FIS (issuer processor) with WorldPay (merchant acquirer). FIS, Fiserv, and Global Payments have struggled to win over investors over the last five years, following these big deals.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Chargebacks. </strong>When a consumer doesn’t want to pay for an item, it can request a chargeback. T<a href="https://www.youtube.com/watch?ab_channel=BancardSales&amp;v=09ibuR5I3uE">he reasons for a chargeback can be numerous and valid, including fraud, item not as described, duplicate transactions, and more.</a> In the event of fraud, a cardholder would dispute the charge with their bank. The bank would freeze their card and file a chargeback with the card network (Visa as an example). Visa would send a provisional credit to the customers card and take the money back from the merchant, then it would send the chargeback request detail to the merchant. If the merchant doesn’t dispute the chargeback, it will be assessed a <a href="https://chargebacks911.com/visa-chargeback/">$25-35 chargeback fee by Visa</a>. However, if it does dispute the chargeback, and correctly can identify that the card actually did purchase the goods, then the issuer, the bank that is “underwriting” credit to the consumer, can be put on the hook for the funds used for the purchase. I never knew that both the merchant and issuer can be on the hook for chargebacks, but not the network! Another way in which Visa and Mastercard make money through the ecosystem!</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Marqeta’s confusion. </strong>For our first payments book, we took a look at several of the new players in the credit card ecosystem, including Marqeta, Adyen, and Stripe. Its been quite a two years! Marqeta went public in June 2021, <a href="https://www.reuters.com/technology/marqeta-prices-ipo-above-range-valuing-it-15-bln-source-2021-06-08/">valuing the company at $15B</a>. <a href="https://techcrunch.com/2021/03/14/stripe-closes-600m-round-at-a-95b-valuation/">Stripe raised additional funds at a $95B</a> valuation, and <a href="https://companiesmarketcap.com/adyen/marketcap/#:~:text=Market%20cap%3A%20%2453.98%20Billion">Adyen’s valuation hit $98B</a>! But oh how the times change! Just two years later, and Stripe’s valuation is back at $50B, including a <a href="https://techcrunch.com/2023/03/15/stripe-now-valued-at-50b-following-6-5b-raise/">massively dilutive $6.5B raise to pay for employee taxes in option conversion</a>. Adyen’s valuation sits at $53B today, a close to 50% decline, despite growing EBITDA 16% to 728M in 2022.. Marqeta may have had the worst time of all, which is said because Ahmed Siddiqui, worked at Marqeta for a number of years. Marqeta’s stock <a href="https://www.forbes.com/sites/jeffkauflin/2022/08/11/why-marqetas-founder-and-ceo-is-stepping-down/?sh=159f6fb12cea">fell 85%, its CEO/Founder left the company</a>, its gross margins have compressed from <a href="https://investors.marqeta.com/static-files/c83ce0d5-d60a-40a6-9905-cf4cdb0be783">high 40’s back to down to low 40s</a>, and its main customer Block has become an even larger customer, <a href="https://investors.marqeta.com/static-files/90de5bae-2628-461a-a0f1-8e3ea02490aa">now driving 77% of its revenue.</a> Marqeta went from next generation issuer processor and Stripe wannabe to an outsourced custom development shop for Block. My guess is its actual reputation sits somewhere in between the two. Expectations for Marqeta have fallen off a cliff, and its market cap sits at a tiny $2.6B. I’m not sure Block would be an immediate acquirer, because the market for issuer processing is incredibly competitive and <a href="https://www.fool.com/investing/2023/04/12/hold-up-block-stock-is-not-a-buy-on-the-dip/">Block has had its own stock price troubles</a>. A spun out WorldPay could make sense as an acquirer. Visa would have made sense as acquirer, <a href="https://whalewisdom.com/stock/mq">because it owns about 2.5% of Marqeta</a> and has for many years, but <a href="https://techcrunch.com/2023/06/28/visa-acquires-brazilian-fintech-startup-pismo-in-1b-blockbuster-deal/">their recent acquisition of Pismo</a>, believed to be a LATAM focused and better version of Marqeta. It’s unlikely Marqeta will exist long as a small solo issuer processor!</p><h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Dig Deeper</strong></span></h3></li></ol><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?ab_channel=FintechNexus&amp;v=TJ45wSSLW10">Why Embedded Finance Holds the Keys to Modernization w/ Simon Khalaf, Marqeta, Inc.</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.acquired.fm/episodes/season-3-episode-7-venmo-sf-live-show-with-andrew-kortina">Venmo (SF live show with Andrew Kortina) - Acquired Podcast (2018)</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?ab_channel=CNBCTelevision&amp;v=5flzC-3BfSw">Fidelity National CEO discusses Worldpay acquisition (2019)</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?ab_channel=AhmedSiddiqui&amp;v=-ZOPpKuh3wE">Anatomy of the Swipe: Payments Ecosystem Overview</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?ab_channel=CNBC&amp;v=l-9VC_uJw4U">How Venmo Makes Money</a></p></li></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+</div></div></div></div></div>
