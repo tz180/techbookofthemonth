@@ -1,0 +1,242 @@
+---
+title: March 2021 - Payments Systems in the U.S. by Carol Coye Benson, Scott Loftesness, and Russ Jones
+date: '2021-03-28'
+slug: mar21
+tags:
+- Visa
+- Mastercard
+- American Express
+- Discover
+- Bank of America
+- Stripe
+- Marqeta
+- Adyen
+- Apple
+- Open-loop
+- Closed-loop
+- Snowflake
+- AWS
+- Nike
+- BNPL
+- Andreessen Horowitz
+- Angela Strange
+- Slack
+- Google Cloud
+- UnionPay
+- BigCommerce
+- Jamie Dimon
+- Dodd-Frank
+- Durbin Amendment
+- JP Morgan Chase
+- Debit Cards
+- Credit Cards
+- Chime
+- Branch
+- Earnin'
+- US Department of Justice
+- Intuit
+- Starbucks
+- Amazon
+- Walmart
+categories:
+- Non-Fiction
+cover: /assets/1615689079566-E4HVID06PKFTFFGASA0W_51fyoOKC5DL._SX382_BO1%2C204%2C203%2C200_.jpg
+---
+<div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Post Body" data-type="item" data-updated-on="1615686335334" id="item-604d6866a1b3ce1d74e896c4"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text" id="block-99d278d6f6bd7b939bde"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <p class="" style="white-space:pre-wrap;">This month we dive into the fintech space for the first time! Glenbrook Partners is a famous payments consulting company. This classic book describes the history and current state of the many financial systems we use every day. While the book is a bit dated and reads like a textbook, it throws in some great real-world observations and provides a great foundation for any payments novice!</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text" id="block-c9ad5c3f9fad2b315b87"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Tech Themes</strong></span></h3><ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>Mapping Open-Loop and Closed-Loop Networks.  </strong>The major credit and debit card providers (Visa, Mastercard, American Express, China UnionPay, and Discover) all compete for the same spots in customer wallets but have unique and differing backgrounds and mechanics. The first credit card on the scene was the <a href="https://minesafetydisclosures.com/blog/2019/5/29/part-l-a-history-of-visa">BankAmericard in the late 1950’s</a>. As it took off, Bank of America started licensing the technology all across the US and created National BankAmericard Inc. (NBI) to facilitate its card program. NBI merged with its international counterpart (IBANCO) to form Visa in the mid-1970’s. Another group of California banks had created the Interbank Card Association (ICA) to compete with Visa and in 1979 renamed itself Mastercard. Both organizations remained owned by the banks until their IPO’s in 2006 (Mastercard) and 2008 (Visa). Both of these companies are known as open-loop networks, that is they work with any bank and require banks to sign up customers and merchants. As the bank points out, “This structure allows the two end parties to transact with each other without having direct relationships with each other’s banks.” This convenient feature of open-loop payments systems means that they can scale incredibly quickly. Any time a bank signs up a new customer or merchant, they immediately have access to the network of all other banks on the Mastercard / Visa network. In contrast to open-loop systems, American Express and Discover operate largely closed-loop systems, where they enroll each merchant and customer individually. Because of this onerous task of finding and signing up every single consumer/merchant, Amex and Discover cannot scale to nearly the size of Visa/Mastercard. However, there is no bank intermediation and the networks get total access to all transaction data, making them a go-to solution for things like loyalty programs, where a merchant may want to leverage data to target specific brand benefits at a customer. Open-loop systems like Apple Pay (its tied to your bank account) and closed-loop systems like Starbuck’s purchasing app (funds are pre-loaded and can only be redeemed at Starbucks) can be found everywhere. Even Snowflake, the data warehouse provider and <a href="/books/feb21">subject of last month’s TBOTM</a> is a closed-loop payments network. <a href="https://www.snowflake.com/legal-files/CreditConsumptionTable.pdf">Customers buy Snowflake credits up-front</a>, which can only be used to redeem Snowflake compute services. In contrast, AWS and other cloud’s are beginning to offer more open-loop style networks, where AWS credits can be redeemed against non-AWS software. Side note - these credit systems and odd-pricing structures deliberately mislead customers and obfuscate actual costs, allowing the cloud companies to better control gross margins and revenue growth. It’s fascinating to view the world through this open-loop / closed-loop dynamic.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>New Kids on the Block - What are Stripe, Adyen, and Marqeta? </strong><a href="https://stripe.com/newsroom/news/stripe-series-h">Stripe recently raised at a minuscule valuation of $95B</a>, making it the highest valued private startup (ever?!). <a href="https://www.paymentsdive.com/news/inside-marqetas-plans-to-grow-its-card-as-a-service-offering/595965/">Marqeta, its API/card-issuing counterpart, is prepping a 2021 IPO that may value it at $10B.</a> Adyen, a Dutch public company is worth close to $60B (Visa is worth $440B for comparison). Stripe and Marqeta are API-based payment service providers, which allow businesses to easily accept online payments and issue debit and credit cards for a variety of use cases. Adyen is a merchant account provider, which means it actually maintains the merchant account used to run a company’s business - this often comes with enormous scale benefits and reduced costs, which is why large customers like <a href="https://www.adyen.com/blog/category/case-studies?category=case-studies">Nike have opted for Adyen</a>. This merchant account clearing process can take quite a while which is why Stripe is focused on SMB’s - a business can sign up as a Stripe customer and <a href="https://www.fundera.com/blog/adyen-vs-stripe">almost immediately begin accepting online payments on the internet</a>. Stripe and Marqeta’s API’s allow a seamless integration into payment checkout flows. On top of this basic but highly now simplified use case, Stripe and Marqeta (and Adyen) allow companies to issue debit and credit cards for all sorts of use cases. This is creating an absolute BOOM in fintech, as companies seek to try new and innovative ways of issuing credit/debit cards - <a href="https://dashdevs.com/blog/card-issuing/">such as expense management, banking-as-a-service, and buy-now-pay-later</a>. Why is this now such a big thing when Stripe, Adyen, and Marqeta were all created before 2011? <a href="https://www.businesswire.com/news/home/20160204006175/en/Visa-Opens-its-Global-Network-with-Launch-of-Visa-Developer">In 2016, Visa launched its first developer API’s</a> which allowed companies like Stripe, Adyen, and Marqeta to become licensed Visa card issuers - now any merchant could issue their own branded Visa card. That is why Andreessen Horowitz’s fintech partner Angela Strange proclaimed: <a href="https://a16z.com/2020/01/21/every-company-will-be-a-fintech-company/">“Every company will be a fintech company.”</a> (this is also clearly some VC marketing)! Mastercard followed suit in 2019, launching its open API called the <a href="https://www.pymnts.com/mastercard/2019/digital-api-platform/#:~:text=Mastercard%20announced%20Tuesday%20(May%2014,provide%20digital%20capabilities%20to%20customers.&amp;text=Those%20will%20focus%20on%20further,enhanced%20digital%20experiences%20to%20consumers.">Mastercard Innovation Engine</a>. The big networks decided to support innovation - Visa is an investor in Stripe and Marqeta, AmEx is an investor in Stripe, and Mastercard is an investor in Marqeta. Surprisingly, no network providers are investors in Adyen. Fintech innovation has always seen that the upstarts re-write the incumbents (Visa and Mastercard are bigger than the banks with much better business models) - will the same happen here?</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Building a High Availability System. </strong>Do Mastercard and Visa have the highest availability needs of any system? Obviously, people are angry when Slack or Google Cloud goes down, but think about how many people are affected when Visa or Mastercard goes down? In 2018, a UK hardware failure prompted a five-hour outage at Visa: <a href="https://www.theguardian.com/world/live/2018/jun/01/visa-outage-payment-chaos-after-card-network-crashes-live-updates">“Disgruntled customers at supermarkets, petrol stations and abroad vented their frustrations on social media when there was little information from the financial services firm. Bank transactions were also hit.”</a> High availability is a measure of system uptime: <a href="https://www.digitalocean.com/community/tutorials/what-is-high-availability">“Availability is often expressed as a percentage indicating how much uptime is expected from a particular system or component in a given period of time, where a value of 100% would indicate that the system never fails. For instance, a system that guarantees 99% of availability in a period of one year can have up to 3.65 days of downtime (1%).”</a> According to Statista, <a href="https://www.statista.com/statistics/261327/number-of-per-card-credit-card-transactions-worldwide-by-brand-as-of-2011/">Visa handles ~185B transactions per year</a> (a cool 6,000 per second), while UnionPay comes in second with 131B and Mastercard in third with 108B. For the last twelve months end June 30, 2020, Visa processed $8.7T in payments volume which means that the average transaction was ~$47. At 6,000 transactions per second, Visa loses $282,000 in payment volume every second it’s down. Mastercard and Visa have always been historically very cagey about disclosing data center operations (the only article I could find is from 2013) though they control their own operations much like other technology giants. <a href="https://www.networkcomputing.com/networking/inside-visas-data-center">“One of the keys to the [Visa] network's performance, Quinlan says, is capacity. And Visa has lots of it. Its two data centers--which are mirror images of each other and can operate interchangeably--are configured to process as many as 30,000 simultaneous transactions, or nearly three times as much as they've ever been asked to handle. Inside the pods, 376 servers, 277 switches, 85 routers, and 42 firewalls--all connected by 3,000 miles of cable--hum around the clock, enabling transactions around the globe in near real-time and keeping Visa's business running.”</a> The data infrastructure challenges that payments systems are subjected to are massive and yet they all seem to perform very well. I’d love to learn more about how they do it!</p></li></ol><h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Business Themes</strong></span></h3>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div><div class="sqs-block gallery-block sqs-block-gallery sqs-col-6 span-6 float float-right" data-block-json="&#123;&quot;existingGallery&quot;:null,&quot;hSize&quot;:6,&quot;newWindow&quot;:false,&quot;floatDir&quot;:&quot;right&quot;,&quot;methodOption&quot;:&quot;transient&quot;,&quot;aspectRatio&quot;:null,&quot;auto-crop&quot;:true,&quot;autoplay&quot;:false,&quot;blockAnimation&quot;:&quot;none&quot;,&quot;collectionId&quot;:&quot;604d6866a1b3ce1d74e896bd&quot;,&quot;controls&quot;:true,&quot;design&quot;:&quot;slideshow&quot;,&quot;meta-position&quot;:&quot;bottom&quot;,&quot;show-meta&quot;:true,&quot;show-meta-basic&quot;:true,&quot;show-meta-only-title&quot;:false,&quot;show-meta-only-description&quot;:false,&quot;show-meta-on-hover&quot;:true,&quot;square-thumbs&quot;:true,&quot;thumbnails&quot;:false,&quot;vSize&quot;:null,&quot;transientGalleryId&quot;:&quot;604d6866a1b3ce1d74e896bd&quot;&#125;" data-block-type="8" data-sqsp-block="gallery" id="block-2919aeebe0cb6c2cf07a"><div class="sqs-block-content">
+
+
+  
+
+  
+
+
+<div class="
+  sqs-gallery-container
+  sqs-gallery-block-slideshow
+  
+  
+  sqs-gallery-has-controls
+  
+
+  
+    sqs-gallery-block-show-meta sqs-gallery-block-meta-position-bottom
+    sqs-gallery-block-meta-hover
+  
+  sqs-gallery-block-show-meta
+  
+  
+
+  
+  
+
+  
+  block-animation-none
+  clear"
+  
+  
+>
+  <div class="sqs-gallery">
+    
+      
+
+        
+          
+            <div class="slide content-fill" data-type="image" data-click-through-url="">
+              
+                <noscript><img src="/assets/1616892537800-9JJI1X9NE7L2NS8JHKRZ_interchange_fee.jpg" alt="interchange_fee.jpg" /></noscript><img class="thumb-image" elementtiming="system-gallery-block-slideshow" data-src="/assets/1616892537800-9JJI1X9NE7L2NS8JHKRZ_interchange_fee.jpg" data-image="/assets/1616892537800-9JJI1X9NE7L2NS8JHKRZ_interchange_fee.jpg" data-image-dimensions="897x533" data-image-focal-point="0.5106382978723404,0.0" alt="interchange_fee.jpg" data-load="false" data-image-id="605fd278893521348a53f7f7" data-type="image" />
+              
+
+              
+                
+              
+              <div class="color-overlay"></div>
+            </div>
+          
+          
+        
+
+        
+
+        
+
+      
+
+        
+          
+            <div class="slide content-fill" data-type="image" data-click-through-url="">
+              
+                <noscript><img src="/assets/1616892536881-AF0XZKFINOVHU9BTFVE2_Interchange.png" alt="Interchange.png" /></noscript><img class="thumb-image" elementtiming="system-gallery-block-slideshow" data-src="/assets/1616892536881-AF0XZKFINOVHU9BTFVE2_Interchange.png" data-image="/assets/1616892536881-AF0XZKFINOVHU9BTFVE2_Interchange.png" data-image-dimensions="840x472" data-image-focal-point="0.5,0.5" alt="Interchange.png" data-load="false" data-image-id="605fd277d0497601bbab3b64" data-type="image" />
+              
+
+              
+                
+              
+              <div class="color-overlay"></div>
+            </div>
+          
+          
+        
+
+        
+
+        
+
+      
+    
+  </div>
+
+  
+    <div class="sqs-gallery-meta-container">
+    
+    
+      
+      
+        <div class="sqs-gallery-controls">
+          <a
+            tabindex="0"
+            role="button"
+            class="previous"
+            aria-label="Previous Slide"
+          ></a>
+          <a
+            tabindex="0"
+            role="button"
+            class="next"
+            aria-label="Next Slide"
+          ></a>
+        </div>
+      
+    
+    
+    </div> <!-- END .sqs-gallery-meta-container -->
+  
+
+</div>
+
+
+
+
+
+
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" data-sqsp-block="text" id="block-62503a2d585644f27249"><div class="sqs-block-content">
+
+<div class="sqs-html-content" data-sqsp-text-block-content>
+  <ol data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><strong>What is interchange and why does it exist? </strong>BigCommerce has a great simple definition for interchange: <a href="https://www.bigcommerce.com/ecommerce-answers/what-are-interchange-fees-and-how-are-they-calculated/#:~:text=Definition%3A%20Interchange%20fees%20are%20transaction,involved%20in%20approving%20the%20payment.">“Interchange fees are transaction fees that the merchant's bank account must pay whenever a customer uses a credit/debit card to make a purchase from their store. The fees are paid to the card-issuing bank to cover handling costs, fraud and bad debt costs and the risk involved in approving the payment.”</a> What is crazy about interchange is that it is not the banks, but the networks (Mastercard, Visa, China UnionPay) that set interchange rates. On top of that, the networks set the rates but receive no revenue from interchange itself. As the book points out: “Since the card netork’s issuing customers are the recipients of interchange fees, the level of interchange that a network sets is an important element in the network’s competitive position. A higher level of interchange on one network’s card products naturally makes that network’s card products more attractive to card issuers.” The incentives here are wild - the card issuers (banks) want higher interchange because they receive the interchange from the merchant’s bank in a transaction, the card networks want more card issuing customers and offering higher interchange rates better positions them in competitive battles. The merchant is left worse off by higher interchange rates, as the merchant bank almost always passes this fee on to the merchant itself ($100 received via credit card turns out to only be $97 when it gets to their bank account because of fees). <a href="https://www.valuepenguin.com/credit-card-processing/interchange-fees">Visa and Mastercard have different interchange rates for every type of transaction and acceptance method</a> - making it a complicated nightmare to actually understand their fees. <a href="https://www.businessinsider.com/mastercard-visa-credit-card-fee-hikes-may-be-on-horizon-2021-2">The networks and their issuers may claim that increased interchange fees allow banks to invest more in fraud protection, risk management, and handling costs</a>, but there is no way to verify this claim. This has caused a crazy war <a href="https://www.wsj.com/articles/the-credit-card-fees-merchants-hate-banks-love-and-consumers-pay-11592731800">between merchants, the card networks, and the card issuers</a>.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Why is Jamie Dimon so pissed about fintechs? </strong>In a recent interview, Jamie Dimon, CEO of JP Morgan Chase, recently called fintechs <a href="https://www.cnbc.com/2021/01/15/jamie-dimon-says-jpmorgan-chase-should-absolutely-be-scared-s-less-about-fintech-threat.html#:~:text=Jamie%20Dimon's%20message%20to%20the,Be%20frightened%20of%20fintech%20rivals.&amp;text=Dimon%20said%20he%20sent%20his,to%20keep%20an%20eye%20on.">“examples of unfair competition.”</a> Dimon is angry about the famous (or infamous) <a href="https://en.wikipedia.org/wiki/Durbin_amendment">Durbin Amendment</a>, which was a last-minute addition included in the landmark <a href="https://en.wikipedia.org/wiki/Dodd%E2%80%93Frank_Wall_Street_Reform_and_Consumer_Protection_Act">Dodd-Frank Wall Street Reform and Consumer Protection Act of 2010</a>. The Durbin amendment attempted to cap the interchange amount that could be charged by banks and tier the interchange rates based on the assets of the bank. In theory, capping the rates would mean that merchants paid less in fees, and the merchant would pass these lower fees onto the consumer by giving them lower prices thus spurring demand. The tiering would mean banks with &gt;$10B in assets under management would make less in interchange fees, leveling the playing field for smaller banks and credit unions. <a href="https://due.com/blog/understanding-the-durbin-amendment-and-how-it-impacts-your-business/">“The regulated [bank with &gt;$10B in assets] debit fee is 0.05% + $0.21, while the unregulated is 1.60% + $0.05. Before the Durbin Amendment the fee was 1.190% + $0.10.”</a> While this did lower debit card interchange, a few unintended consequences resulted: 1. Regulators expected that banks would make substantially less revenue, however, they failed to recognize that banks might increase other fees to offset this lost revenue stream: <a href="https://www.magnifymoney.com/blog/banking/durbin-amendment/">“Banks have cut back on offering rewards for their debit cards. Banks have also started charging more for their checking accounts or they require a larger monthly balance.”</a> In addition, many smaller banks couldn’t recoup the lost revenue amount, <a href="https://www.statista.com/statistics/184536/number-of-fdic-insured-us-commercial-bank-institutions/">leading to many bankruptcies and consolidation</a>. 2. Because a flat rate fee was introduced regardless of transaction size, smaller merchants were charged more in interchange than the prior system (which was pro-rated based on $ amount). “<a href="https://www.magnifymoney.com/blog/banking/durbin-amendment/">One problem with the Durbin Amendment is that it didn’t take small transactions into account,” said Ellen Cunningham, processing expert at CardFellow.com. “On a small transaction, 22 cents is a bigger bite than on a larger transaction. Convenience stores, coffee shops and others with smaller sales benefited from the original system, with a lower per-transaction fee even if it came with a higher percentage.”</a> These small retailers ended up raising prices in some instances to combat these additional fees - causing the law to have the opposite effect of lowering costs to consumers. Dimon is angry that this law has allowed fintech companies to start charging higher prices for debit card transactions. As shown above, smaller banks earn a substantial amount more in interchange fees. <a href="https://www.cnbc.com/2019/02/15/small-banks-youve-never-heard-of-quietly-power-the-booming-fintech-industry--.html">These smaller banks are moving quickly to partner with fintechs</a>, which now power hundreds of millions of dollars in account balances and Dimon believes they are not spending enough attention on anti-money laundering and fraud practices. In addition, fintech’s are making money in suspect ways - <a href="https://www.axios.com/chime-fee-income-atm-revenue-14572e20-7397-4cb2-96e8-425126850363.html">Chime makes 21% of its revenue through high out-of-network ATM fees</a>, and cash advance companies like <a href="https://time.com/nextadvisor/banking/cash-advance-apps/">Dave, Branch, and Earnin’ are offering what amount to pay-day loans</a> to customers.</p></li><li><p class="" style="white-space:pre-wrap;"><strong>Mastercard and Visa: A history of regulation. </strong>Visa and Mastercard have been the subject of many regulatory battles over the years. <a href="https://www.wsj.com/articles/justice-department-investigating-visa-over-debit-card-practices-11616164525?mod=searchresults_pos6&amp;page=1">The US Justice Department announced in March that it would be investigating Visa over online debit-card practices</a>. In 1996, Visa and Mastercard were sued by merchants and settled for $3B. In 1998, the Department of Justice won a case against Visa and Mastercard for not allowing issuing banks to work with other card networks like AmEx and Discover. In 2009, Mastercard and Visa were sued by the European Union and forced to reduce debit card swipe fees by 0.2%. In 2012, Mastercard and Visa were sued for price-fixing fees and were forced to pay $6.25B in a settlement. The networks have been sued by the <a href="https://en.wikipedia.org/wiki/Visa_Inc.">US, Europe, Australia, New Zealand, ATM Operators,</a> <a href="https://www.paymentsjournal.com/the-global-card-networks-get-sued-again-this-time-by-intuit/">Intuit, Starbucks, Amazon, Walmart, and many more</a>. Each time they have been forced to modify fees and practices to ensure competition. However, this has also re-inforced their dominance as the biggest payment networks which is why no competitors have been established since the creation of the networks in the 1970’s. Also, leave it to the banks to establish a revenue source that is so good that it is almost entirely undefeatable by legislation. When, if ever, will Visa and Mastercard not be dominant payments companies?</p></li></ol><h3 style="text-align:center;white-space:pre-wrap;"><span style="text-decoration:underline"><strong>Dig Deeper</strong></span></h3><ul data-rte-list="default"><li><p class="" style="white-space:pre-wrap;"><a href="https://www.americanbanker.com/news/big-banks-big-tech-face-off-over-swipe-fees">American Banker: Big banks, Big Tech face-off over swipe fees</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?ab_channel=Stripe&amp;v=hta9-Ja2HQc">Stripe Sessions 2019 | The future of payments</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.youtube.com/watch?ab_channel=Stripe&amp;v=hta9-Ja2HQc">China's growth cements UnionPay as world's largest card scheme</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://www.washingtonpost.com/archive/lifestyle/magazine/1994/11/04/the-day-the-credit-card-was-born/d42da27b-0437-4a67-b753-bf9b440ad6dc/">THE DAY THE CREDIT CARD WAS BORN by Joe Nocera (Washington Post)</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://minesafetydisclosures.com/blog/2019/7/23/part-ll-an-overview-of-visa">Mine Safety Disclosure’s 2019 Visa Investment Case</a></p></li><li><p class="" style="white-space:pre-wrap;"><a href="https://drive.google.com/file/d/0BzG5iyelNfWfcTZ1bUFZTThWeTQ/view">FineMeValue’s Payments Overview</a></p></li></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div>
