@@ -138,9 +138,11 @@ def page(title, content):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<link rel="icon" href="/assets/tbom-logo.png">
 </head>
 <body>
 <header class="site-header">
+<a class="logo-link" href="/"><img class="site-logo" src="/assets/tbom-logo.png" alt="Tech Book of the Month logo"></a>
 <div class="site-title"><a href="/">Tech Book of the Month</a></div>
 <nav>{nav}</nav>
 </header>
