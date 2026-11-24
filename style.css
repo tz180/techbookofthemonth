@@ -7,16 +7,19 @@ h1, h2, h3, .site-title, nav { font-family: "Raleway", "Helvetica Neue", Helveti
 a { color: #333; text-underline-offset: 3px; }
 a:hover { color: #000; }
 
-/* header */
-.site-header { text-align: center; padding: 3em 1em 1.6em; }
-.site-title { font-size: 2.4em; font-weight: 600; letter-spacing: .01em; }
-.site-title a { color: #111; text-decoration: none; }
+/* header: black band in the logo's colors (mint #abe5e1 on black) */
+.site-header { text-align: center; padding: 2.4em 1em 1.6em; background: #000; border-bottom: 4px solid #abe5e1; }
+.site-logo { display: block; height: 120px; width: auto; margin: 0 auto; }
+.site-title { font-size: 2.2em; font-weight: 600; letter-spacing: .01em; margin-top: .35em; }
+.site-title a { color: #fff; text-decoration: none; }
+.site-title a:hover { color: #abe5e1; }
 .site-header nav { margin-top: 1em; font-size: .82em; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; }
-.site-header nav a { color: #767676; text-decoration: none; margin: 0 .4em; }
-.site-header nav a:hover { color: #111; }
+.site-header nav a { color: #abe5e1; text-decoration: none; margin: 0 .4em; opacity: .85; }
+.site-header nav a:hover { color: #fff; opacity: 1; }
 
 main { max-width: 1080px; margin: 0 auto; padding: 1em 1.2em 3em; }
-.site-footer { border-top: 1px solid #e6e6e6; text-align: center; color: #999; font-size: .85em; padding: 2em 1em 3em; max-width: 1080px; margin: 0 auto; }
+.site-footer { background: #000; border-top: 4px solid #abe5e1; text-align: center; color: #a8cfc9; font-size: .85em; padding: 2em 1em 3em; }
+::selection { background: #abe5e1; }
 
 /* articles (post pages + homepage feed) */
 article.post { max-width: 740px; margin: 0 auto; }
@@ -25,22 +28,22 @@ article.post h1 { font-size: 2.1em; margin: .2em 0 .1em; }
 .feed-title { font-size: 1.9em; margin: 0 0 .1em; }
 .feed-title a { color: #111; text-decoration: none; }
 .feed-title a:hover { text-decoration: underline; }
-.feed-post { padding: 2.2em 0 2.6em; border-bottom: 1px solid #e6e6e6; }
+.feed-post { padding: 2.2em 0 2.6em; border-bottom: 1px solid #dcecea; }
 .feed-post:first-child { padding-top: .6em; }
 .feed-post:last-child { border-bottom: none; }
 .post-date, .book-date { color: #999; font-size: .8em; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; margin: .4em 0 1em; }
 article.post img { max-width: 100%; height: auto; display: block; margin: 1.2em auto; }
 .cover { max-width: 320px; box-shadow: 0 4px 20px rgba(0,0,0,.16); }
-article.post a { color: #1a5fb4; }
-article.post a:hover { color: #0f3f7d; }
+article.post a { color: #0e7568; }
+article.post a:hover { color: #084f46; }
 article.post h3 { font-size: 1.25em; margin-top: 1.6em; }
-blockquote { border-left: 3px solid #ddd; margin-left: 0; padding-left: 1em; color: #555; }
+blockquote { border-left: 3px solid #8fd0ca; margin-left: 0; padding-left: 1em; color: #555; }
 .tags { margin-top: 2.5em; padding-top: 1em; border-top: 1px solid #e6e6e6; font-size: .9em; color: #767676; }
 .tags a { color: #767676; }
 
 /* prev / next navigation on book pages */
 .post-nav { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; padding-top: 1.2em; border-top: 1px solid #e6e6e6; font-size: .92em; }
-.post-nav a { max-width: 48%; color: #1a5fb4; }
+.post-nav a { max-width: 48%; color: #0e7568; }
 .post-nav .older { margin-left: auto; text-align: right; }
 
 /* book grid (archive + tag/category listings): every cover is cropped to
@@ -49,11 +52,11 @@ blockquote { border-left: 3px solid #ddd; margin-left: 0; padding-left: 1em; col
 .book-card { margin: 0; }
 .book-cover-link { display: block; text-decoration: none; }
 .book-cover { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; background: #f4f4f4; box-shadow: 0 2px 10px rgba(0,0,0,.14); transition: transform .18s ease, box-shadow .18s ease; }
-.book-cover-link:hover .book-cover, .book-cover-link:focus .book-cover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(0,0,0,.22); }
+.book-cover-link:hover .book-cover, .book-cover-link:focus .book-cover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(14,117,104,.30); outline: 3px solid #abe5e1; }
 .book-nocover { display: flex; align-items: center; justify-content: center; aspect-ratio: 2 / 3; background: #f0ead9; color: #333; padding: 1em; text-align: center; font-family: "Raleway", sans-serif; font-weight: 600; box-shadow: 0 2px 10px rgba(0,0,0,.14); }
 .book-card .book-date { margin: .9em 0 .25em; }
 .book-title { font-size: 1.08em; font-weight: 600; line-height: 1.4; margin: 0; }
 .book-title a { color: #111; text-decoration: none; }
-.book-title a:hover { text-decoration: underline; }
+.book-title a:hover { text-decoration: underline; text-decoration-color: #0e7568; }
 .book-card .excerpt { color: #666; font-size: .94em; margin: .45em 0 0; }
 @media (max-width: 600px) { .book-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1.6em 1.1em; } .site-title { font-size: 1.9em; } }
