@@ -134,6 +134,9 @@ def page(title, content):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)} — Tech Book of the Month</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -161,27 +164,39 @@ def excerpt(body, n=240):
         return text
     return text[:n].rsplit(" ", 1)[0] + "…"
 
+def book_card(p, with_excerpt=False):
+    """One book as a card in the original site's summary-grid style: a
+    uniform cropped cover (the cover itself links to the book's page),
+    the date above, and the title as a link below."""
+    title = html.escape(p["title"])
+    if p.get("cover"):
+        cover = (f'<a class="book-cover-link" href="/books/{p["slug"]}/">'
+                 f'<img class="book-cover" src="{p["cover"]}" alt="{title}" loading="lazy"></a>')
+    else:
+        cover = (f'<a class="book-cover-link" href="/books/{p["slug"]}/">'
+                 f'<span class="book-nocover">{title}</span></a>')
+    exc = f'\n<p class="excerpt">{html.escape(excerpt(p["body"]))}</p>' if with_excerpt else ""
+    return f"""<li class="book-card">{cover}
+<p class="book-date">{fmt_date(p['dt'])}</p>
+<h3 class="book-title"><a href="/books/{p['slug']}/">{title}</a></h3>{exc}</li>"""
+
 def listing(post_list):
-    items = []
-    for p in post_list:
-        thumb = f'<img class="thumb" src="{p["cover"]}" alt="">' if p.get("cover") else ""
-        items.append(f"""<li>{thumb}<h2><a href="/books/{p['slug']}/">{html.escape(p['title'])}</a></h2>
-<p class="entry-date">{fmt_date(p['dt'])}</p>
-<p class="excerpt">{html.escape(excerpt(p['body']))}</p></li>""")
-    return '<ul class="post-list">\n' + "\n".join(items) + "\n</ul>"
+    items = [book_card(p, with_excerpt=True) for p in post_list]
+    return '<ul class="book-grid">\n' + "\n".join(items) + "\n</ul>"
 
 def archive_listing(posts):
-    """Archive = a grid of large book covers, each cover itself the link to
-    the book's page (mirrors the original Squarespace archive)."""
-    items = []
-    for p in posts:
-        title = html.escape(p["title"])
-        if p.get("cover"):
-            inner = f'<img class="archive-cover" src="{p["cover"]}" alt="{title}" loading="lazy">'
-        else:
-            inner = f'<span class="archive-nocover">{title}</span>'
-        items.append(f'<li class="archive-item"><a class="archive-cover-link" href="/books/{p["slug"]}/" title="{title}">{inner}</a></li>')
-    return '<ul class="archive-grid">\n' + "\n".join(items) + "\n</ul>"
+    items = [book_card(p) for p in posts]
+    return '<ul class="book-grid">\n' + "\n".join(items) + "\n</ul>"
+
+def full_post(p):
+    """A complete post, as on the original site's blog feed homepage."""
+    cover_html = f'<img class="cover" src="{p["cover"]}" alt="">' if p.get("cover") else ""
+    return f"""<article class="post feed-post">
+<h2 class="feed-title"><a href="/books/{p['slug']}/">{html.escape(p['title'])}</a></h2>
+<p class="post-date">{fmt_date(p['dt'])}</p>
+{cover_html}
+{p['body']}
+</article>"""
 
 # ---------- build ----------
 def write(relpath, content, generated):
@@ -235,12 +250,10 @@ def main():
 </article>"""
         write(f"books/{p['slug']}/index.html", page(p["title"], content), generated)
 
-    # homepage + books index
-    intro = ('<p class="intro">A monthly book club for technology, building '
-             'technology companies, and the history of technology. One book '
-             'a month, written up in full.</p>\n')
-    write("index.html", page("Home", "<h1>Tech Book of the Month</h1>\n" + intro + listing(posts)), generated)
-    write("books/index.html", page("Books", "<h1>Books</h1>\n" + listing(posts)), generated)
+    # homepage + books index: the full-post blog feed, as on the original site
+    feed = "\n".join(full_post(p) for p in posts)
+    write("index.html", page("Home", feed), generated)
+    write("books/index.html", page("Books", feed), generated)
 
     # tag pages (exact segments from the original sitemap + any new tags)
     segments = list(TAG_SEGMENTS)
