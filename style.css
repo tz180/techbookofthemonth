@@ -1,51 +1,59 @@
+/* Tech Book of the Month — styled after the original Squarespace site:
+   Raleway headings, Proxima Nova body text, white background, and the
+   summary-grid archive with uniform auto-cropped book covers. */
 * { box-sizing: border-box; }
-body { font-family: Georgia, 'Times New Roman', serif; color: #222; margin: 0; line-height: 1.65; background: #fdfdfa; }
-.site-header { text-align: center; padding: 2.2em 1em 1.2em; border-bottom: 1px solid #e3e1d8; background: #fff; }
-.site-title { font-size: 2em; letter-spacing: .02em; }
+body { font-family: "proxima-nova", "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333; margin: 0; line-height: 1.7; background: #fff; font-size: 17px; }
+h1, h2, h3, .site-title, nav { font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+a { color: #333; text-underline-offset: 3px; }
+a:hover { color: #000; }
+
+/* header */
+.site-header { text-align: center; padding: 3em 1em 1.6em; }
+.site-title { font-size: 2.4em; font-weight: 600; letter-spacing: .01em; }
 .site-title a { color: #111; text-decoration: none; }
-nav { margin-top: .6em; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .9em; text-transform: uppercase; letter-spacing: .08em; }
-nav a { color: #555; text-decoration: none; }
-nav a:hover { color: #000; text-decoration: underline; }
-main { max-width: 720px; margin: 0 auto; padding: 1.5em 1em 3em; }
-.site-footer { border-top: 1px solid #e3e1d8; text-align: center; color: #777; font-size: .85em; padding: 1.5em 1em 2.5em; }
-h1 { font-size: 1.9em; line-height: 1.25; margin-bottom: .2em; }
-h2 { line-height: 1.3; }
-a { color: #1a5fb4; text-underline-offset: 2px; }
-a:hover { color: #0f3f7d; }
-.intro { font-size: 1.08em; color: #444; margin: .4em 0 1.8em; }
-.post-date, .entry-date { color: #777; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .85em; text-transform: uppercase; letter-spacing: .06em; }
-img { max-width: 100%; height: auto; }
-.cover { display: block; margin: 1.2em auto; max-width: 300px; box-shadow: 0 4px 18px rgba(0,0,0,.18); border-radius: 3px; }
+.site-header nav { margin-top: 1em; font-size: .82em; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; }
+.site-header nav a { color: #767676; text-decoration: none; margin: 0 .4em; }
+.site-header nav a:hover { color: #111; }
 
-/* post listings (home, books, tag and category pages) */
-.post-list { list-style: none; padding: 0; }
-.post-list li { display: flex; gap: 1.1em; background: #fff; border: 1px solid #e7e4da; border-radius: 8px; padding: 1.1em 1.2em; margin: 0 0 1.1em; transition: box-shadow .15s ease, border-color .15s ease; }
-.post-list li:hover { border-color: #cfcaba; box-shadow: 0 3px 12px rgba(0,0,0,.08); }
-.post-list .thumb { width: 84px; height: 112px; object-fit: cover; flex: none; border-radius: 3px; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
-.post-list h2 { margin: 0 0 .15em; font-size: 1.3em; }
-.post-list h2 a { color: #14549e; text-decoration: underline; text-decoration-color: #bcd2ec; text-underline-offset: 3px; }
-.post-list h2 a:hover { color: #0f3f7d; text-decoration-color: currentColor; }
-.post-list .excerpt { margin: .3em 0 0; color: #444; }
-@media (max-width: 560px) { .post-list li { flex-direction: column; } .post-list .thumb { width: 72px; height: 96px; } }
+main { max-width: 1080px; margin: 0 auto; padding: 1em 1.2em 3em; }
+.site-footer { border-top: 1px solid #e6e6e6; text-align: center; color: #999; font-size: .85em; padding: 2em 1em 3em; max-width: 1080px; margin: 0 auto; }
 
-.tags { margin-top: 2.5em; padding-top: 1em; border-top: 1px solid #e3e1d8; font-size: .9em; color: #555; }
-.tags a { color: #555; }
-article.post img { display: block; margin: 1em auto; border-radius: 3px; }
-article.post .cover { margin-top: 1.2em; }
-blockquote { border-left: 3px solid #ddd; margin-left: 0; padding-left: 1em; color: #444; }
+/* articles (post pages + homepage feed) */
+article.post { max-width: 740px; margin: 0 auto; }
+article.post h1, .feed-title { font-weight: 700; color: #111; line-height: 1.25; }
+article.post h1 { font-size: 2.1em; margin: .2em 0 .1em; }
+.feed-title { font-size: 1.9em; margin: 0 0 .1em; }
+.feed-title a { color: #111; text-decoration: none; }
+.feed-title a:hover { text-decoration: underline; }
+.feed-post { padding: 2.2em 0 2.6em; border-bottom: 1px solid #e6e6e6; }
+.feed-post:first-child { padding-top: .6em; }
+.feed-post:last-child { border-bottom: none; }
+.post-date, .book-date { color: #999; font-size: .8em; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; margin: .4em 0 1em; }
+article.post img { max-width: 100%; height: auto; display: block; margin: 1.2em auto; }
+.cover { max-width: 320px; box-shadow: 0 4px 20px rgba(0,0,0,.16); }
+article.post a { color: #1a5fb4; }
+article.post a:hover { color: #0f3f7d; }
+article.post h3 { font-size: 1.25em; margin-top: 1.6em; }
+blockquote { border-left: 3px solid #ddd; margin-left: 0; padding-left: 1em; color: #555; }
+.tags { margin-top: 2.5em; padding-top: 1em; border-top: 1px solid #e6e6e6; font-size: .9em; color: #767676; }
+.tags a { color: #767676; }
 
 /* prev / next navigation on book pages */
-.post-nav { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; padding-top: 1.2em; border-top: 1px solid #e3e1d8; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .92em; }
-.post-nav a { max-width: 48%; }
+.post-nav { display: flex; justify-content: space-between; gap: 1em; margin-top: 2.5em; padding-top: 1.2em; border-top: 1px solid #e6e6e6; font-size: .92em; }
+.post-nav a { max-width: 48%; color: #1a5fb4; }
 .post-nav .older { margin-left: auto; text-align: right; }
 
-/* archive page: cover thumb + clickable title rows */
-.archive-month { margin-top: 1.8em; }
-.archive-list { list-style: none; padding: 0; margin: .6em 0 0; }
-.archive-entry { padding: .55em .4em; border-bottom: 1px solid #eee9dd; }
-.archive-entry:hover { background: #fff; }
-.archive-link { display: flex; align-items: center; gap: .9em; text-decoration: none; }
-.archive-thumb { width: 40px; height: 54px; object-fit: cover; flex: none; border-radius: 2px; box-shadow: 0 1px 5px rgba(0,0,0,.18); }
-.archive-title { font-size: 1.08em; font-weight: bold; color: #14549e; text-decoration: underline; text-decoration-color: #bcd2ec; text-underline-offset: 3px; }
-.archive-link:hover .archive-title { color: #0f3f7d; text-decoration-color: currentColor; }
-.archive-date { display: block; margin: .15em 0 0 3.35em; color: #777; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .82em; text-transform: uppercase; letter-spacing: .06em; }
+/* book grid (archive + tag/category listings): every cover is cropped to
+   the exact same 2:3 tile, and the cover itself is the link */
+.book-grid { list-style: none; padding: 0; margin: 1.2em 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 2.4em 2em; }
+.book-card { margin: 0; }
+.book-cover-link { display: block; text-decoration: none; }
+.book-cover { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; background: #f4f4f4; box-shadow: 0 2px 10px rgba(0,0,0,.14); transition: transform .18s ease, box-shadow .18s ease; }
+.book-cover-link:hover .book-cover, .book-cover-link:focus .book-cover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(0,0,0,.22); }
+.book-nocover { display: flex; align-items: center; justify-content: center; aspect-ratio: 2 / 3; background: #f0ead9; color: #333; padding: 1em; text-align: center; font-family: "Raleway", sans-serif; font-weight: 600; box-shadow: 0 2px 10px rgba(0,0,0,.14); }
+.book-card .book-date { margin: .9em 0 .25em; }
+.book-title { font-size: 1.08em; font-weight: 600; line-height: 1.4; margin: 0; }
+.book-title a { color: #111; text-decoration: none; }
+.book-title a:hover { text-decoration: underline; }
+.book-card .excerpt { color: #666; font-size: .94em; margin: .45em 0 0; }
+@media (max-width: 600px) { .book-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1.6em 1.1em; } .site-title { font-size: 1.9em; } }
