@@ -44,7 +44,37 @@ def parse_content_file(path):
     d = meta.get("date")
     if isinstance(d, (date, datetime)):
         meta["date"] = d.strftime("%Y-%m-%d")
-    return meta, body
+    return meta, fix_images(body)
+
+# ---------- image repair ----------
+_IMG_TAG = re.compile(r"<img\b[^>]*>", re.IGNORECASE)
+_SRC_ATTR = re.compile(r"(?<![-\w])src\s*=", re.IGNORECASE)
+_DATA_SRC = re.compile(r'data-src\s*=\s*"([^"]+)"', re.IGNORECASE)
+_SRCSET = re.compile(r'srcset\s*=\s*"([^"]+)"', re.IGNORECASE)
+
+def fix_images(body):
+    """Squarespace lazy-load <img data-src="..."> tags carry no src attribute
+    and only render via Squarespace's JS, which the static site does not have.
+    Give every such image a real src (from data-src, else the first srcset
+    candidate) so it loads natively."""
+    def repl(m):
+        tag = m.group(0)
+        if _SRC_ATTR.search(tag):
+            return tag
+        url = None
+        dm = _DATA_SRC.search(tag)
+        if dm:
+            url = dm.group(1)
+        else:
+            sm = _SRCSET.search(tag)
+            if sm:
+                url = sm.group(1).split(",")[0].strip().split(" ")[0]
+        if not url:
+            return tag
+        tag = tag.replace('data-load="false"', "")
+        return re.sub(r"<img\b", f'<img src="{url}" loading="lazy"', tag,
+                      count=1, flags=re.IGNORECASE)
+    return _IMG_TAG.sub(repl, body)
 
 def load_posts():
     posts = []
@@ -147,9 +177,12 @@ def archive_listing(posts):
         if key != cur:
             if cur is not None:
                 out.append("</ul>")
-            out.append(f'<h2 class="archive-month">{key}</h2>\n<ul>')
+            out.append(f'<h2 class="archive-month">{key}</h2>\n<ul class="archive-list">')
             cur = key
-        out.append(f'<li>{fmt_date(p["dt"])} — <a href="/books/{p["slug"]}/">{html.escape(p["title"])}</a></li>')
+        thumb = (f'<img class="archive-thumb" src="{p["cover"]}" alt="" loading="lazy">'
+                 if p.get("cover") else "")
+        out.append(f"""<li class="archive-entry"><a class="archive-link" href="/books/{p['slug']}/">{thumb}<span class="archive-title">{html.escape(p['title'])}</span></a>
+<span class="archive-date">{fmt_date(p['dt'])}</span></li>""")
     if cur is not None:
         out.append("</ul>")
     return "\n".join(out)
@@ -179,7 +212,7 @@ def main():
         shutil.copyfile(os.path.join(ROOT, "assets", fn), os.path.join(DIST, "assets", web))
 
     # post pages
-    for p in posts:
+    for i, p in enumerate(posts):
         cover_html = f'<img class="cover" src="{p["cover"]}" alt="">' if p.get("cover") else ""
         meta_html = ""
         if p.get("categories"):
@@ -188,17 +221,29 @@ def main():
         if p.get("tags"):
             links = ", ".join(f'<a href="{tag_href(t)}">{html.escape(t)}</a>' for t in p["tags"])
             meta_html += f'<p class="tags">Tags: {links}</p>'
+        nav_links = []
+        if i > 0:
+            newer = posts[i - 1]
+            nav_links.append(f'<a class="newer" href="/books/{newer["slug"]}/">&larr; Newer book: {html.escape(newer["title"])}</a>')
+        if i < len(posts) - 1:
+            older = posts[i + 1]
+            nav_links.append(f'<a class="older" href="/books/{older["slug"]}/">Older book: {html.escape(older["title"])} &rarr;</a>')
+        nav_html = ('<nav class="post-nav">' + "\n".join(nav_links) + "</nav>") if nav_links else ""
         content = f"""<article class="post">
 <h1>{html.escape(p['title'])}</h1>
 <p class="post-date">{fmt_date(p['dt'])}</p>
 {cover_html}
 {p['body']}
 {meta_html}
+{nav_html}
 </article>"""
         write(f"books/{p['slug']}/index.html", page(p["title"], content), generated)
 
     # homepage + books index
-    write("index.html", page("Home", "<h1>Tech Book of the Month</h1>\n" + listing(posts)), generated)
+    intro = ('<p class="intro">A monthly book club for technology, building '
+             'technology companies, and the history of technology. One book '
+             'a month, written up in full.</p>\n')
+    write("index.html", page("Home", "<h1>Tech Book of the Month</h1>\n" + intro + listing(posts)), generated)
     write("books/index.html", page("Books", "<h1>Books</h1>\n" + listing(posts)), generated)
 
     # tag pages (exact segments from the original sitemap + any new tags)
