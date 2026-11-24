@@ -171,21 +171,17 @@ def listing(post_list):
     return '<ul class="post-list">\n' + "\n".join(items) + "\n</ul>"
 
 def archive_listing(posts):
-    out, cur = [], None
+    """Archive = a grid of large book covers, each cover itself the link to
+    the book's page (mirrors the original Squarespace archive)."""
+    items = []
     for p in posts:
-        key = p["dt"].strftime("%B %Y")
-        if key != cur:
-            if cur is not None:
-                out.append("</ul>")
-            out.append(f'<h2 class="archive-month">{key}</h2>\n<ul class="archive-list">')
-            cur = key
-        thumb = (f'<img class="archive-thumb" src="{p["cover"]}" alt="" loading="lazy">'
-                 if p.get("cover") else "")
-        out.append(f"""<li class="archive-entry"><a class="archive-link" href="/books/{p['slug']}/">{thumb}<span class="archive-title">{html.escape(p['title'])}</span></a>
-<span class="archive-date">{fmt_date(p['dt'])}</span></li>""")
-    if cur is not None:
-        out.append("</ul>")
-    return "\n".join(out)
+        title = html.escape(p["title"])
+        if p.get("cover"):
+            inner = f'<img class="archive-cover" src="{p["cover"]}" alt="{title}" loading="lazy">'
+        else:
+            inner = f'<span class="archive-nocover">{title}</span>'
+        items.append(f'<li class="archive-item"><a class="archive-cover-link" href="/books/{p["slug"]}/" title="{title}">{inner}</a></li>')
+    return '<ul class="archive-grid">\n' + "\n".join(items) + "\n</ul>"
 
 # ---------- build ----------
 def write(relpath, content, generated):
